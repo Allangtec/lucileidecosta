@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lucileide Costa | Psicóloga Clínica Online — CRP 01/9096</title>
+<meta name="description" content="Psicoterapia online com Lucileide Costa. Mais de 20 anos ajudando adultos com ansiedade, autoestima, relacionamentos e qualidade de vida. Atendimento para todo o Brasil." />
+<meta name="author" content="Lucileide Costa" />
+<meta property="og:title" content="Lucileide Costa | Psicóloga Clínica Online" />
+<meta property="og:description" content="Psicoterapia online para mais equilíbrio emocional e qualidade de vida. Atendimento humanizado, CRP 01/9096." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5ef; --fg:#243329; --card:#fffdf7; --muted:#6b7a6f; --border:#e6e3d9;
+  --primary:#4a6b53; --primary-2:#7ea287; --primary-fg:#ffffff;
+  --accent:#e7d9c0; --secondary:#efeadd;
+  --wa:#25a36a; --wa-fg:#ffffff;
+  --shadow-soft: 0 10px 40px -12px rgba(40,60,45,.18);
+  --shadow-elegant: 0 20px 60px -20px rgba(40,60,45,.28);
+  --grad-hero: linear-gradient(135deg,#f4efe2 0%,#dceadd 100%);
+  --grad-cta: linear-gradient(135deg,rgba(46,68,52,.92),rgba(74,107,83,.92));
+  --font-display:"Fraunces", ui-serif, Georgia, serif;
+  --font-sans:"Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius:1rem;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.5}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em;font-weight:500;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.icon{width:1em;height:1em;display:inline-block;vertical-align:-0.15em}
+.container{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:9999px;padding:.875rem 1.5rem;font-weight:600;font-size:.875rem;transition:all .25s ease;cursor:pointer;border:0}
+.btn-wa{background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-ghost{background:var(--card);color:var(--fg);border:1px solid var(--border)}
+.btn-ghost:hover{border-color:rgba(74,107,83,.4);background:var(--secondary)}
+.tag{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);background:rgba(255,253,247,.6);backdrop-filter:blur(8px);padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;color:var(--muted);font-weight:500}
+.tag .icon{color:var(--primary)}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--primary)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(247,245,239,.75);backdrop-filter:blur(16px);border-bottom:1px solid rgba(230,227,217,.6)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .badge{width:2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-size:1rem}
+.brand .name{font-family:var(--font-display);font-weight:600;font-size:1rem;line-height:1.1}
+.brand .sub{font-size:.625rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+.nav-links{display:none;gap:1.75rem;color:var(--muted);font-size:.875rem}
+.nav-links a:hover{color:var(--fg)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:var(--wa-fg);padding:.5rem 1rem;border-radius:9999px;font-size:.875rem;font-weight:500;box-shadow:var(--shadow-soft)}
+.nav-cta:hover{transform:scale(1.04)}
+@media(min-width:768px){ .nav-links{display:flex} }
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:7rem 0 5rem;background:var(--grad-hero)}
+.blob{position:absolute;border-radius:9999px;filter:blur(80px);z-index:0;pointer-events:none}
+.blob-1{top:-8rem;left:-8rem;width:24rem;height:24rem;background:rgba(74,107,83,.18)}
+.blob-2{bottom:-8rem;right:-8rem;width:24rem;height:24rem;background:rgba(231,217,192,.55)}
+.hero-grid{position:relative;display:grid;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.25rem,5.5vw,3.75rem);margin-top:1.25rem}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero .lead{margin-top:1.5rem;max-width:36rem;color:var(--muted);font-size:1.0625rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.indicators{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem .75rem;color:var(--muted);font-size:.875rem}
+.indicators li{display:flex;align-items:center;gap:.5rem;list-style:none}
+.indicators .icon{color:var(--primary)}
+.hero-photo-wrap{position:relative;max-width:28rem;margin:0 auto;width:100%}
+.hero-photo-wrap::before{content:"";position:absolute;inset:-1.5rem;background:rgba(74,107,83,.12);border-radius:2.5rem;filter:blur(40px);z-index:-1}
+.hero-photo{border-radius:2rem;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-elegant)}
+.hero-photo img{width:100%;height:auto;object-fit:cover}
+.float-card{position:absolute;background:rgba(255,253,247,.95);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:1rem;padding:.75rem 1rem;box-shadow:var(--shadow-soft);display:none;align-items:center;gap:.75rem}
+.float-card.left{bottom:-1.5rem;left:-1.5rem}
+.float-card.right{top:-1.25rem;right:-1rem}
+.float-card .ic{width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-size:1.1rem}
+.float-card.right .ic{background:var(--accent);color:#5e4a2a}
+.float-card .small{font-size:.7rem;color:var(--muted)}
+.float-card .big{font-size:.875rem;font-weight:600;color:var(--fg)}
+@media(min-width:768px){
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:4rem}
+  .indicators{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
+  .float-card{display:flex}
+}
+
+/* SECTIONS */
+section{padding:5rem 0}
+@media(min-width:768px){section{padding:7rem 0}}
+.center{text-align:center;max-width:36rem;margin:0 auto}
+.center h2,.section-title{font-size:clamp(1.875rem,3.5vw,2.5rem);margin-top:.75rem}
+.center p{margin-top:1rem;color:var(--muted)}
+
+/* SOBRE */
+.sobre-grid{display:grid;gap:3rem;align-items:center}
+@media(min-width:768px){.sobre-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.sobre-img{border-radius:1.5rem;border:1px solid var(--border);box-shadow:var(--shadow-soft);width:100%;height:auto;object-fit:cover}
+.sobre p{color:var(--muted);margin-top:1rem;line-height:1.7}
+.sobre strong{color:var(--fg)}
+.stats{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
+.stat-n{font-family:var(--font-display);font-size:1.875rem;font-weight:600;color:var(--primary)}
+.stat-l{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+
+/* CARDS GRID */
+.bg-soft{background:rgba(239,234,221,.5)}
+.grid-4{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:3.5rem}
+@media(min-width:640px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;height:100%;transition:all .3s ease}
+.card:hover{transform:translateY(-4px);border-color:rgba(74,107,83,.3);box-shadow:var(--shadow-soft)}
+.card .ic{width:3rem;height:3rem;display:grid;place-items:center;border-radius:.75rem;background:rgba(74,107,83,.12);color:var(--primary);font-size:1.25rem;transition:all .3s ease}
+.card:hover .ic{background:var(--primary);color:var(--primary-fg)}
+.card h3{margin-top:1.25rem;font-size:1.125rem;font-weight:600}
+.card p{margin-top:.5rem;font-size:.875rem;color:var(--muted);line-height:1.6}
+
+.grid-3{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:3.5rem}
+@media(min-width:640px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.benefit{display:flex;gap:1rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;transition:box-shadow .25s}
+.benefit:hover{box-shadow:var(--shadow-soft)}
+.benefit .ic{width:2.75rem;height:2.75rem;flex-shrink:0;display:grid;place-items:center;border-radius:9999px;background:var(--accent);color:#5e4a2a;font-size:1.1rem}
+.benefit h3{font-size:1.125rem;font-weight:600}
+.benefit p{font-size:.875rem;color:var(--muted);margin-top:.25rem}
+
+/* TIMELINE */
+.timeline{position:relative;max-width:56rem;margin:4rem auto 0}
+.timeline::before{content:"";position:absolute;left:1.5rem;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(74,107,83,.4),rgba(74,107,83,.15),transparent);display:none}
+@media(min-width:768px){.timeline::before{left:50%;display:block}}
+.step{position:relative;display:grid;gap:1.5rem;align-items:center;margin-bottom:2.5rem}
+@media(min-width:768px){.step{grid-template-columns:1fr 1fr}}
+.step .text{padding:0}
+@media(min-width:768px){.step .text{padding:0 2.5rem;text-align:right}}
+.step .n{font-family:var(--font-display);font-size:3rem;font-weight:600;color:rgba(74,107,83,.3);line-height:1}
+.step h3{margin-top:.5rem;font-size:1.25rem;font-weight:600}
+.step p{margin-top:.5rem;font-size:.875rem;color:var(--muted);line-height:1.6}
+.step .dot{display:none;justify-content:center}
+@media(min-width:768px){.step .dot{display:flex}}
+.step .dot span{width:3rem;height:3rem;display:grid;place-items:center;border-radius:9999px;background:var(--primary);color:var(--primary-fg);border:4px solid var(--bg);box-shadow:var(--shadow-soft);z-index:1;font-size:1.1rem}
+.step.alt .text{order:2;text-align:left}
+.step.alt .dot{order:1}
+.cta-center{margin-top:3rem;text-align:center}
+
+/* DEPOIMENTOS */
+.testimonials{display:grid;gap:1.25rem;grid-template-columns:1fr;margin-top:3.5rem}
+@media(min-width:768px){.testimonials{grid-template-columns:repeat(3,1fr)}}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.75rem;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;height:100%}
+.stars{color:var(--primary);display:flex;gap:2px;font-size:1rem}
+.stars .icon{fill:currentColor}
+.testimonial blockquote{margin-top:1rem;font-family:var(--font-display);font-size:1.0625rem;line-height:1.6;color:var(--fg);flex:1}
+.testimonial figcaption{margin-top:1.5rem;display:flex;align-items:center;gap:.75rem}
+.testimonial .avatar{width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-weight:600}
+.testimonial .who{font-size:.875rem;font-weight:600}
+.testimonial .role{font-size:.75rem;color:var(--muted)}
+
+/* FAQ */
+.faq-wrap{max-width:48rem;margin:0 auto}
+.faq-list{margin-top:3rem;display:flex;flex-direction:column;gap:.75rem}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:1rem;overflow:hidden}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem;background:transparent;border:0;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.faq-q span{font-family:var(--font-display);font-weight:600;font-size:1.0625rem}
+.faq-q .icon{color:var(--primary);font-size:1.25rem;transition:transform .3s}
+.faq-item.open .faq-q .icon{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.5rem}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:1.25rem}
+.faq-a p{font-size:.9rem;color:var(--muted);line-height:1.7}
+
+/* CTA FINAL */
+.cta-final{position:relative;overflow:hidden;padding:6rem 0;color:#fff;text-align:center}
+.cta-final-bg{position:absolute;inset:0;background:var(--grad-cta);z-index:-1}
+.cta-final h2{font-size:clamp(2rem,4.5vw,3rem);margin-top:1.25rem}
+.cta-final p{max-width:36rem;margin:1.5rem auto 0;color:rgba(255,255,255,.88);font-size:1.0625rem;line-height:1.65}
+.cta-final .tag{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.1)}
+.cta-final .tag .icon{color:#fff}
+.cta-final .btn-final{margin-top:2.5rem;background:#fff;color:var(--primary);padding:1rem 2rem;font-size:1rem;box-shadow:var(--shadow-elegant);display:inline-flex;align-items:center;gap:.5rem;border-radius:9999px;font-weight:600;border:0;cursor:pointer}
+.cta-final .btn-final:hover{transform:translateY(-2px)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);background:var(--bg);padding:3.5rem 0 1.5rem}
+.foot-grid{display:grid;gap:2.5rem;grid-template-columns:1fr}
+@media(min-width:768px){.foot-grid{grid-template-columns:repeat(3,1fr)}}
+.foot-h{font-family:var(--font-display);font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.foot ul{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.foot a{color:var(--muted);font-size:.875rem;display:inline-flex;align-items:center;gap:.5rem}
+.foot a:hover{color:var(--primary)}
+.foot-bottom{text-align:center;color:var(--muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2.5rem;padding-top:1.5rem}
+
+/* FLOATING WHATSAPP */
+.fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:50;width:3.5rem;height:3.5rem;display:grid;place-items:center;border-radius:9999px;background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);font-size:1.4rem;transition:transform .2s}
+.fab:hover{transform:scale(1.1)}
+.fab::before{content:"";position:absolute;inset:0;border-radius:9999px;animation:pulseRing 2.2s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,163,106,.5)}70%{box-shadow:0 0 0 16px rgba(37,163,106,0)}100%{box-shadow:0 0 0 0 rgba(37,163,106,0)}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<script>
+// ── CONFIGURAÇÃO — edite apenas aqui ──────────────────────────────────────────
+const WHATSAPP_NUMBER = "5500000000000"; // TODO: troque pelo número real (só dígitos)
+const WHATSAPP_MSG    = encodeURIComponent("Olá Lucileide, gostaria de agendar uma sessão de psicoterapia online.");
+const WHATSAPP_URL    = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
+const INSTAGRAM_URL   = "https://instagram.com/"; // TODO: troque pelo perfil real
+
+const IMG_SOBRE    = "https://a.imagem.app/GezZ4a.png";
+const IMG_PSICOLOGA = "https://a.imagem.app/GezRcY.png";
+
+const temas = [
+  { icon:"brain",        t:"Ansiedade",               d:"Compreender e regular sentimentos de inquietação e medo." },
+  { icon:"sun",          t:"Estresse",                d:"Estratégias para lidar com a sobrecarga do dia a dia." },
+  { icon:"heart",        t:"Autoestima",              d:"Reconstruir uma relação mais saudável consigo mesmo(a)." },
+  { icon:"users",        t:"Relacionamentos",         d:"Vínculos mais conscientes, afetivos e equilibrados." },
+  { icon:"sparkles",     t:"Autoconhecimento",        d:"Compreender padrões, emoções e novas possibilidades." },
+  { icon:"leaf",         t:"Sobrecarga emocional",    d:"Acolhimento para fases de exaustão e cansaço." },
+  { icon:"trending-up",  t:"Qualidade de vida",       d:"Hábitos e escolhas que sustentam o bem-estar." },
+  { icon:"award",        t:"Desenvolvimento pessoal", d:"Crescimento contínuo, com clareza e propósito." },
+];
+
+const beneficios = [
+  { icon:"home",         t:"Conforto",         d:"Atenda de casa, do seu lugar favorito." },
+  { icon:"lock",         t:"Privacidade",      d:"Sigilo absoluto, ambiente seguro." },
+  { icon:"calendar",     t:"Flexibilidade",    d:"Horários que cabem na sua rotina." },
+  { icon:"globe",        t:"De qualquer lugar",d:"Atendimento em todo o Brasil." },
+  { icon:"shield-check", t:"Segurança",        d:"Plataformas criptografadas." },
+  { icon:"clock",        t:"Praticidade",      d:"Sem deslocamento, sem trânsito." },
+];
+
+const passos = [
+  { n:"01", icon:"message",  t:"Primeiro contato pelo WhatsApp", d:"Você envia uma mensagem, conta brevemente o que está buscando e tira suas dúvidas." },
+  { n:"02", icon:"calendar", t:"Agendamento da sessão",          d:"Combinamos o melhor horário e enviamos as orientações para a sua primeira consulta online." },
+  { n:"03", icon:"heart",    t:"Início do acompanhamento",       d:"Sessões semanais por vídeo, em um espaço seguro e acolhedor para o seu processo." },
+];
+
+const depoimentos = [
+  { n:"M. R.", t:"Encontrei um espaço de escuta verdadeira. A terapia mudou a forma como me relaciono comigo mesma." },
+  { n:"A. S.", t:"Lucileide tem uma escuta atenta e acolhedora. Hoje me sinto mais leve e no controle das minhas emoções." },
+  { n:"C. L.", t:"Profissional sensível e ética. Aprendi a lidar com minha ansiedade de uma forma que nunca imaginei." },
+];
+
+const faqs = [
+  { q:"Como funciona a terapia online?",        a:"As sessões acontecem por chamada de vídeo em plataforma segura. Você só precisa de internet estável, um ambiente reservado e um dispositivo com câmera e microfone." },
+  { q:"Quanto tempo dura uma sessão?",          a:"Cada sessão tem duração média de 50 minutos e, geralmente, é realizada semanalmente — podendo ser ajustada conforme a sua necessidade." },
+  { q:"Como faço o pagamento?",                 a:"O pagamento é feito por Pix ou transferência bancária, antes de cada sessão. Os valores e formas são combinados no primeiro contato." },
+  { q:"O atendimento é sigiloso?",              a:"Sim. O sigilo é garantido pelo Código de Ética do Psicólogo e tudo o que é falado em sessão é totalmente confidencial." },
+  { q:"Posso fazer terapia de qualquer cidade?",a:"Sim. O atendimento é 100% online, para qualquer cidade do Brasil ou brasileiros que residem no exterior." },
+];
+
+// ── SVG Icons ─────────────────────────────────────────────────────────────────
+const icons = {
+  brain:          '<path d="M12 5a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0-3 3 3 3 0 0 0 1 2.2A3 3 0 0 0 5 14a3 3 0 0 0 2 2.8A3 3 0 0 0 10 19a3 3 0 0 0 2-1V5z"/><path d="M12 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1 3 3 3 3 0 0 1-1 2.2A3 3 0 0 1 19 14a3 3 0 0 1-2 2.8A3 3 0 0 1 14 19a3 3 0 0 1-2-1V5z"/>',
+  sun:            '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>',
+  heart:          '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>',
+  users:          '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+  sparkles:       '<path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM5 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/>',
+  leaf:           '<path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-9h7v7a9 9 0 0 1-9 9z"/><path d="M2 22l8-8"/>',
+  "trending-up":  '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>',
+  award:          '<circle cx="12" cy="8" r="6"/><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8"/>',
+  home:           '<path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/>',
+  lock:           '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  calendar:       '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/>',
+  globe:          '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>',
+  "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
+  clock:          '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  message:        '<path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/>',
+  "chevron-down": '<polyline points="6 9 12 15 18 9"/>',
+  instagram:      '<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.6-3.4A4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>',
+  star:           '<polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/>',
+  "arrow-right":  '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
+  laptop:         '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/>',
+};
+
+function ico(name, cls = "icon") {
+  const p = icons[name] || "";
+  return `<svg class="${cls}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+}
+
+function stars5() {
+  return Array(5).fill(`<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>`).join("");
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+
+  // set all whatsapp links
+  document.querySelectorAll("[data-wa]").forEach(el => el.href = WHATSAPP_URL);
+  document.querySelectorAll("[data-ig]").forEach(el => el.href = INSTAGRAM_URL);
+
+  // year
+  document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
+
+  // TEMAS
+  const temasEl = document.getElementById("temas-grid");
+  if (temasEl) {
+    temasEl.innerHTML = temas.map((t, i) => `
+      <div class="reveal" style="transition-delay:${i*60}ms">
+        <div class="card">
+          <span class="ic">${ico(t.icon)}</span>
+          <h3>${t.t}</h3>
+          <p>${t.d}</p>
+        </div>
+      </div>`).join("");
+  }
+
+  // BENEFÍCIOS
+  const benefEl = document.getElementById("beneficios-grid");
+  if (benefEl) {
+    benefEl.innerHTML = beneficios.map((b, i) => `
+      <div class="reveal" style="transition-delay:${i*60}ms">
+        <div class="benefit">
+          <span class="ic">${ico(b.icon)}</span>
+          <div><h3>${b.t}</h3><p>${b.d}</p></div>
+        </div>
+      </div>`).join("");
+  }
+
+  // PASSOS
+  const passosEl = document.getElementById("passos-timeline");
+  if (passosEl) {
+    passosEl.innerHTML = passos.map((p, i) => `
+      <div class="reveal" style="transition-delay:${i*100}ms">
+        <div class="step ${i % 2 === 1 ? "alt" : ""}">
+          <div class="text">
+            <span class="n">${p.n}</span>
+            <h3>${p.t}</h3>
+            <p>${p.d}</p>
+          </div>
+          <div class="dot"><span>${ico(p.icon)}</span></div>
+        </div>
+      </div>`).join("");
+  }
+
+  // DEPOIMENTOS
+  const depEl = document.getElementById("depoimentos-grid");
+  if (depEl) {
+    depEl.innerHTML = depoimentos.map((d, i) => `
+      <div class="reveal" style="transition-delay:${i*80}ms">
+        <figure class="testimonial">
+          <div class="stars">${stars5()}</div>
+          <blockquote>"${d.t}"</blockquote>
+          <figcaption>
+            <span class="avatar">${d.n[0]}</span>
+            <div><div class="who">${d.n}</div><div class="role">Paciente</div></div>
+          </figcaption>
+        </figure>
+      </div>`).join("");
+  }
+
+  // FAQ
+  const faqEl = document.getElementById("faq-list");
+  if (faqEl) {
+    faqEl.innerHTML = faqs.map((f, i) => `
+      <div class="reveal" style="transition-delay:${i*50}ms">
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>${f.q}</span>${ico("chevron-down")}
+          </button>
+          <div class="faq-a"><p>${f.a}</p></div>
+        </div>
+      </div>`).join("");
+
+    // FAQ accordion
+    faqEl.addEventListener("click", e => {
+      const btn = e.target.closest(".faq-q");
+      if (!btn) return;
+      const item = btn.closest(".faq-item");
+      const open = item.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open);
+    });
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+});
+</script>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="badge">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-9h7v7a9 9 0 0 1-9 9z"/><path d="M2 22l8-8"/></svg>
+      </span>
+      <span>
+        <span class="name">Lucileide Costa</span><br>
+        <span class="sub">Psicóloga · CRP 01/9096</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#ajuda">Como ajudo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-cta" href="#" data-wa>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="tag">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM5 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg>
+        Psicoterapia Online · CRP 01/9096
+      </span>
+      <h1>Psicologia online para quem busca mais <em>equilíbrio emocional</em> e qualidade de vida.</h1>
+      <p class="lead">Mais de 20 anos ajudando pessoas a compreender emoções, fortalecer a autoestima e viver com mais leveza.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="#" data-wa>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+          Agendar pelo WhatsApp
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#como-funciona">Conhecer o Atendimento</a>
+      </div>
+      <ul class="indicators">
+        <li>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+          Atendimento Online
+        </li>
+        <li>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          CRP 01/9096
+        </li>
+        <li>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8"/></svg>
+          +20 anos de experiência
+        </li>
+        <li>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Todo o Brasil
+        </li>
+      </ul>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <img src="https://a.imagem.app/GezRcY.png" alt="Lucileide Costa, psicóloga clínica" width="1024" height="1024">
+        </div>
+        <div class="float-card left">
+          <span class="ic">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <div><div class="small">Acolhimento humanizado</div><div class="big">Escuta sem julgamento</div></div>
+        </div>
+        <div class="float-card right">
+          <span class="ic">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          </span>
+          <div><div class="small">+20 anos</div><div class="big">de experiência clínica</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SOBRE ═══════════════════════════ -->
+<section id="sobre" class="sobre">
+  <div class="container sobre-grid">
+    <div class="reveal">
+      <img class="sobre-img" src="https://a.imagem.app/GezZ4a.png" alt="Espaço acolhedor de atendimento online" loading="lazy" width="1200" height="1400">
+    </div>
+    <div class="reveal" style="transition-delay:.12s">
+      <span class="eyebrow">Sobre a Psicóloga</span>
+      <h2 class="section-title">Um espaço seguro para você se reencontrar.</h2>
+      <p>Sou <strong>Lucileide Costa</strong>, psicóloga clínica com mais de duas décadas de experiência acompanhando pessoas em diferentes momentos da vida. Acredito que cada história é única, e meu trabalho é oferecer escuta atenta, acolhimento e ferramentas que ajudem você a se compreender melhor.</p>
+      <p>Atendo de forma 100% online, com uma abordagem humana, respeitosa e baseada em evidências. Aqui, você encontra um espaço livre de julgamentos para falar sobre o que sente — e construir, no seu tempo, uma vida com mais equilíbrio, leveza e propósito.</p>
+      <div class="stats">
+        <div><div class="stat-n">20+</div><div class="stat-l">Anos de experiência</div></div>
+        <div><div class="stat-n">100%</div><div class="stat-l">Atendimento online</div></div>
+        <div><div class="stat-n">BR</div><div class="stat-l">Todo o Brasil</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ TEMAS ═══════════════════════════ -->
+<section id="ajuda" class="bg-soft">
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">Como a terapia pode ajudar</span>
+      <h2>Temas que cuidamos juntos</h2>
+      <p>Um trabalho terapêutico voltado a adultos que desejam viver com mais consciência e leveza.</p>
+    </div>
+    <div class="grid-4" id="temas-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ BENEFÍCIOS ═══════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">Terapia Online</span>
+      <h2>Os benefícios do atendimento à distância</h2>
+    </div>
+    <div class="grid-3" id="beneficios-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ COMO FUNCIONA ═══════════════════════════ -->
+<section id="como-funciona" class="bg-soft">
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">Como Funciona</span>
+      <h2>Três passos simples para começar</h2>
+    </div>
+    <div class="timeline" id="passos-timeline"></div>
+    <div class="cta-center">
+      <a class="btn btn-wa" href="#" data-wa>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+        Quero agendar minha primeira sessão
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ DEPOIMENTOS ═══════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>Histórias de quem encontrou cuidado aqui</h2>
+    </div>
+    <div class="testimonials" id="depoimentos-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section id="faq" class="bg-soft">
+  <div class="container faq-wrap">
+    <div class="reveal center">
+      <span class="eyebrow">Perguntas Frequentes</span>
+      <h2>Tire suas dúvidas</h2>
+    </div>
+    <div class="faq-list" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CTA FINAL ═══════════════════════════ -->
+<section class="cta-final">
+  <div class="cta-final-bg"></div>
+  <div class="container reveal">
+    <span class="tag">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      Um passo de cada vez
+    </span>
+    <h2>Você não precisa enfrentar tudo sozinho(a).</h2>
+    <p>A terapia pode ser o primeiro passo para compreender suas emoções e construir uma vida com mais equilíbrio e bem-estar.</p>
+    <a class="btn-final" href="#" data-wa>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+      Falar com a psicóloga no WhatsApp
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="foot">
+  <div class="container foot-grid">
+    <div>
+      <div class="brand">
+        <span class="badge">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-9h7v7a9 9 0 0 1-9 9z"/><path d="M2 22l8-8"/></svg>
+        </span>
+        <span class="name">Lucileide Costa</span>
+      </div>
+      <p style="margin-top:.75rem;color:var(--muted);font-size:.875rem;line-height:1.6">
+        Psicóloga Clínica · CRP 01/9096<br>
+        Atendimento 100% Online · Todo o Brasil
+      </p>
+    </div>
+    <div>
+      <div class="foot-h">Contato</div>
+      <ul>
+        <li>
+          <a href="#" data-wa>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+            WhatsApp
+          </a>
+        </li>
+        <li>
+          <a href="#" data-ig target="_blank" rel="noopener">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.6-3.4A4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Institucional</div>
+      <ul>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="foot-bottom">© <span data-year></span> Lucileide Costa · Psicóloga Clínica · CRP 01/9096. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ FAB WHATSAPP ═══════════════════════════ -->
+<a class="fab" href="#" data-wa aria-label="Falar no WhatsApp">
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+</a>
+
+</body>
+</html>
