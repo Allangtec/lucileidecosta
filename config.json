@@ -1,0 +1,103 @@
+{
+  "seo": {
+    "title": "Lucileide Costa | Psicóloga Clínica & Avaliação Psicológica — CRP 01/9096",
+    "description": "Psicoterapia online e avaliação psicológica com Lucileide Maria Cardoso Costa. Mais de 20 anos de experiência em ansiedade, psicologia do trânsito, AP para concursos e avaliação para neurodivergentes. Atendimento para todo o Brasil."
+  },
+  "contato": {
+    "whatsappNumero": "556192355151",
+    "whatsappMensagem": "Olá Lucileide, gostaria de agendar uma sessão de psicoterapia online.",
+    "instagramUrl": "https://instagram.com/psi.lucileidecosta/"
+  },
+  "imagens": {
+    "logo": "https://a.imagem.app/GeYjYX.png",
+    "fotoPerfil": "https://a.imagem.app/GeYST3.jpeg",
+    "fotoSobre": "https://a.imagem.app/GeY7tE.jpeg"
+  },
+  "marca": {
+    "nomeExibicao": "Lucileide Costa",
+    "nomeCompleto": "Lucileide Maria Cardoso Costa",
+    "crp": "CRP 01/9096",
+    "subtituloHeader": "Psicóloga · CRP 01/9096",
+    "subtituloFooter": "Psicóloga Clínica · CRP 01/9096"
+  },
+  "hero": {
+    "tag": "Psicoterapia & Avaliação Psicológica · CRP 01/9096",
+    "tituloHtml": "Psicologia para quem busca mais <em>equilíbrio emocional</em> e qualidade de vida.",
+    "texto": "Mais de 20 anos de experiência em psicoterapia, psicologia do trânsito e avaliação psicológica, com escuta ética, humanizada e baseada em evidências.",
+    "indicadores": [
+      { "icon": "laptop",        "texto": "Atendimento Online" },
+      { "icon": "shield-check",  "texto": "CRP 01/9096" },
+      { "icon": "award",         "texto": "+20 anos de experiência" },
+      { "icon": "globe",         "texto": "Todo o Brasil" }
+    ]
+  },
+  "sobre": {
+    "eyebrow": "Sobre a Psicóloga",
+    "titulo": "Um espaço seguro para você se reencontrar.",
+    "paragrafos": [
+      "Sou <strong>Lucileide Maria Cardoso Costa</strong>, psicóloga formada em 2002, em Belém do Pará, com mais de duas décadas de experiência clínica. Atuo em <strong>avaliação psicológica para procedimentos cirúrgicos</strong>, como cirurgia bariátrica e vasectomia, na elaboração de <strong>laudos de aptidão para concursos públicos</strong> e sou especialista em <strong>Psicologia do Trânsito</strong>.",
+      "Na psicoterapia, acompanho principalmente pessoas que lidam com <strong>ansiedade</strong> e <strong>medo de dirigir</strong>, ajudando a reconstruir a confiança no dia a dia. Também tenho experiência em avaliação psicológica para pessoas neurodivergentes e já palestrei sobre gerenciamento de estresse para instituições bancárias.",
+      "Minha abordagem teórica é <strong>comportamental</strong>, com ênfase na <strong>Terapia Cognitivo-Comportamental (TCC)</strong> — uma abordagem estruturada, prática e baseada em evidências científicas —, aliada a uma escuta humana, ética e sem julgamentos, para que você se compreenda melhor e construa, no seu tempo, mais equilíbrio e qualidade de vida."
+    ],
+    "stats": [
+      { "numero": "20+",  "label": "Anos de experiência" },
+      { "numero": "2002", "label": "Formada em Belém-PA" },
+      { "numero": "BR",   "label": "Atendimento em todo o Brasil" }
+    ]
+  },
+  "temasEyebrow": "Como posso ajudar",
+  "temasTitulo": "Áreas de atuação",
+  "temasDescricao": "Psicoterapia e avaliação psicológica conduzidas com ética, técnica e acolhimento.",
+  "temas": [
+    { "icon": "brain",     "t": "Ansiedade",                        "d": "Compreender e regular sentimentos de inquietação e medo." },
+    { "icon": "car",       "t": "Medo de Dirigir",                  "d": "Atendimento especializado em Psicologia do Trânsito." },
+    { "icon": "clipboard", "t": "AP para Cirurgias",                "d": "Avaliação psicológica e laudo para bariátrica, vasectomia e outros procedimentos cirúrgicos." },
+    { "icon": "award",     "t": "AP para Concursos",                "d": "Laudo de aptidão psicológica para concursos públicos e processos seletivos." },
+    { "icon": "infinity",  "t": "Avaliação para Neurodivergentes",  "d": "Avaliação psicológica acolhedora e respeitosa." },
+    { "icon": "users",     "t": "Gerenciamento de Estresse",        "d": "Palestras corporativas, já realizadas para bancos." },
+    { "icon": "heart",     "t": "Autoestima",                       "d": "Reconstruir uma relação mais saudável consigo mesmo(a)." },
+    { "icon": "sparkles",  "t": "Autoconhecimento",                 "d": "Compreender padrões, emoções e novas possibilidades." }
+  ],
+  "beneficiosEyebrow": "Terapia Online",
+  "beneficiosTitulo": "Os benefícios do atendimento à distância",
+  "beneficios": [
+    { "icon": "home",         "t": "Conforto",          "d": "Atenda de casa, do seu lugar favorito." },
+    { "icon": "lock",         "t": "Privacidade",       "d": "Sigilo absoluto, ambiente seguro." },
+    { "icon": "calendar",     "t": "Flexibilidade",     "d": "Horários que cabem na sua rotina." },
+    { "icon": "globe",        "t": "De qualquer lugar", "d": "Atendimento em todo o Brasil." },
+    { "icon": "shield-check", "t": "Segurança",         "d": "Plataformas criptografadas." },
+    { "icon": "clock",        "t": "Praticidade",       "d": "Sem deslocamento, sem trânsito." }
+  ],
+  "passosEyebrow": "Como Funciona",
+  "passosTitulo": "Três passos simples para começar",
+  "passos": [
+    { "n": "01", "icon": "message",  "t": "Primeiro contato pelo WhatsApp", "d": "Você envia uma mensagem, conta brevemente o que está buscando e tira suas dúvidas." },
+    { "n": "02", "icon": "calendar", "t": "Agendamento da sessão",          "d": "Combinamos o melhor horário e enviamos as orientações necessárias para o atendimento." },
+    { "n": "03", "icon": "heart",    "t": "Início do acompanhamento",       "d": "Sessões periódicas em um espaço seguro, ético e acolhedor para o seu processo." }
+  ],
+  "depoimentosEyebrow": "Depoimentos",
+  "depoimentosTitulo": "Histórias de quem encontrou cuidado aqui",
+  "depoimentos": [
+    { "n": "M. R.", "t": "Encontrei um espaço de escuta verdadeira. A terapia mudou a forma como lido com minha ansiedade no dia a dia." },
+    { "n": "A. S.", "t": "Eu tinha muito medo de dirigir e, com o acompanhamento, recuperei minha confiança ao volante." },
+    { "n": "C. L.", "t": "Profissional sensível, ética e muito preparada. Me senti acolhida em cada sessão." }
+  ],
+  "faqEyebrow": "Perguntas Frequentes",
+  "faqTitulo": "Tire suas dúvidas",
+  "faqs": [
+    { "q": "Como funciona a terapia online?",                                  "a": "As sessões acontecem por chamada de vídeo em plataforma segura. Você só precisa de internet estável, um ambiente reservado e um dispositivo com câmera e microfone." },
+    { "q": "Quanto tempo dura uma sessão?",                                    "a": "Cada sessão tem duração média de 50 minutos e, geralmente, é realizada semanalmente — podendo ser ajustada conforme a sua necessidade." },
+    { "q": "Como faço o pagamento?",                                           "a": "O pagamento é feito por Pix ou transferência bancária, antes de cada sessão. Os valores e formas são combinados no primeiro contato." },
+    { "q": "O atendimento é sigiloso?",                                        "a": "Sim. O sigilo é garantido pelo Código de Ética do Psicólogo e tudo o que é tratado em sessão ou avaliação é confidencial." },
+    { "q": "O que é a Avaliação Psicológica (AP) e quando ela é necessária?",  "a": "A AP é um processo técnico que reúne entrevistas, testes e observações para elaborar um laudo psicológico, exigido em situações como concursos públicos, processos seletivos, cirurgia bariátrica, vasectomia e outros procedimentos cirúrgicos. O formato depende dos instrumentos exigidos em cada caso, e isso é explicado no primeiro contato." },
+    { "q": "Você atende medo de dirigir e avaliação para neurodivergentes?",   "a": "Sim. Sou especialista em Psicologia do Trânsito, com experiência em psicoterapia para medo de dirigir, e também realizo avaliação psicológica de forma acolhedora e respeitosa para pessoas neurodivergentes." },
+    { "q": "Qual é a abordagem teórica utilizada nas sessões?",                "a": "Minha abordagem é comportamental, com ênfase na Terapia Cognitivo-Comportamental (TCC), o que permite um trabalho estruturado, prático e baseado em evidências científicas, adaptado às necessidades de cada paciente." }
+  ],
+  "footer": {
+    "institucional": ["Política de Privacidade", "Termos de Uso"],
+    "desenvolvidoPor": {
+      "texto": "Desenvolvido por GTI Soluções em Informática",
+      "url": "https://wa.me/5561999118365"
+    }
+  }
+}
