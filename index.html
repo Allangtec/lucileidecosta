@@ -2,256 +2,421 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lucileide Costa | Psicóloga Clínica Online — CRP 01/9096</title>
-<meta name="description" content="Psicoterapia online com Lucileide Costa. Mais de 20 anos ajudando adultos com ansiedade, autoestima, relacionamentos e qualidade de vida. Atendimento para todo o Brasil." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>Lucileide Costa | Psicóloga Clínica & Avaliação Psicológica — CRP 01/9096</title>
+<meta name="description" content="Psicoterapia online e avaliação psicológica com Lucileide Maria Cardoso Costa. Mais de 20 anos de experiência em ansiedade, psicologia do trânsito, AP para concursos e avaliação para neurodivergentes. Atendimento para todo o Brasil." />
 <meta name="author" content="Lucileide Costa" />
-<meta property="og:title" content="Lucileide Costa | Psicóloga Clínica Online" />
-<meta property="og:description" content="Psicoterapia online para mais equilíbrio emocional e qualidade de vida. Atendimento humanizado, CRP 01/9096." />
+<meta property="og:title" content="Lucileide Costa | Psicóloga Clínica & Avaliação Psicológica" />
+<meta property="og:description" content="Psicoterapia online e avaliação psicológica com atendimento humanizado. CRP 01/9096." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<!-- Logo dinâmica: será substituída pelo JS após carregar config.json -->
+<link rel="icon" type="image/png" sizes="192x192" id="favicon-link" href="https://a.imagem.app/GeYjYX.png">
+<link rel="apple-touch-icon" id="apple-touch-icon-link" href="https://a.imagem.app/GeYjYX.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ── TOKENS ───────────────────────────────────────────────────── */
 :root{
   --bg:#f7f5ef; --fg:#243329; --card:#fffdf7; --muted:#6b7a6f; --border:#e6e3d9;
-  --primary:#4a6b53; --primary-2:#7ea287; --primary-fg:#ffffff;
+  --primary:#4a6b53; --primary-fg:#ffffff;
   --accent:#e7d9c0; --secondary:#efeadd;
   --wa:#25a36a; --wa-fg:#ffffff;
-  --shadow-soft: 0 10px 40px -12px rgba(40,60,45,.18);
-  --shadow-elegant: 0 20px 60px -20px rgba(40,60,45,.28);
-  --grad-hero: linear-gradient(135deg,#f4efe2 0%,#dceadd 100%);
-  --grad-cta: linear-gradient(135deg,rgba(46,68,52,.92),rgba(74,107,83,.92));
-  --font-display:"Fraunces", ui-serif, Georgia, serif;
-  --font-sans:"Inter", ui-sans-serif, system-ui, sans-serif;
-  --radius:1rem;
+  --shadow-soft:0 10px 40px -12px rgba(40,60,45,.18);
+  --shadow-elegant:0 20px 60px -20px rgba(40,60,45,.28);
+  --grad-hero:linear-gradient(135deg,#f4efe2 0%,#dceadd 100%);
+  --grad-cta:linear-gradient(135deg,rgba(46,68,52,.95),rgba(74,107,83,.95));
+  --font-display:"Fraunces",ui-serif,Georgia,serif;
+  --font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;
 }
-*{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.5}
-h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em;font-weight:500;line-height:1.15}
+
+/* ── RESET ────────────────────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.6;width:100%;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em;font-weight:500;line-height:1.15}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-.icon{width:1em;height:1em;display:inline-block;vertical-align:-0.15em}
-.container{max-width:72rem;margin:0 auto;padding:0 1.25rem}
-.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:9999px;padding:.875rem 1.5rem;font-weight:600;font-size:.875rem;transition:all .25s ease;cursor:pointer;border:0}
-.btn-wa{background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant)}
-.btn-wa:hover{transform:translateY(-2px)}
-.btn-ghost{background:var(--card);color:var(--fg);border:1px solid var(--border)}
-.btn-ghost:hover{border-color:rgba(74,107,83,.4);background:var(--secondary)}
-.tag{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);background:rgba(255,253,247,.6);backdrop-filter:blur(8px);padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;color:var(--muted);font-weight:500}
+
+/* ── UTILITÁRIOS ──────────────────────────────────────────────── */
+.icon{width:1em;height:1em;display:inline-block;vertical-align:-.15em;flex-shrink:0}
+.container{width:100%;max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--primary);display:block}
+.tag{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);background:rgba(255,253,247,.6);backdrop-filter:blur(8px);padding:.3rem .85rem;border-radius:9999px;font-size:.75rem;color:var(--muted);font-weight:500}
 .tag .icon{color:var(--primary)}
-.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--primary)}
+.section-pad{padding:4rem 0}
+@media(min-width:768px){.section-pad{padding:6rem 0}}
+.center{text-align:center}
+.center-wrap{max-width:38rem;margin:0 auto}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(247,245,239,.75);backdrop-filter:blur(16px);border-bottom:1px solid rgba(230,227,217,.6)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:4rem}
-.brand{display:flex;align-items:center;gap:.6rem}
-.brand .badge{width:2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-size:1rem}
-.brand .name{font-family:var(--font-display);font-weight:600;font-size:1rem;line-height:1.1}
-.brand .sub{font-size:.625rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
-.nav-links{display:none;gap:1.75rem;color:var(--muted);font-size:.875rem}
+/* ── BOTÕES ───────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:9999px;padding:.9rem 1.5rem;font-weight:600;font-size:.9375rem;transition:all .25s ease;cursor:pointer;border:0;text-align:center;width:100%}
+@media(min-width:480px){.btn{width:auto}}
+.btn-wa{background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);position:relative;overflow:hidden}
+.btn-wa::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{0%{left:-60%}55%{left:130%}100%{left:130%}}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 24px 64px -16px rgba(37,163,106,.45)}
+.btn-ghost{background:var(--card);color:var(--fg);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:rgba(74,107,83,.4);background:var(--secondary)}
+.btn-group{display:flex;flex-direction:column;gap:.75rem;align-items:stretch}
+@media(min-width:480px){.btn-group{flex-direction:row;align-items:center;flex-wrap:wrap}}
+
+/* ── HEADER / NAV ─────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,245,239,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(230,227,217,.7)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:3.75rem;gap:.75rem}
+.brand{display:flex;align-items:center;gap:.6rem;flex-shrink:1;min-width:0;overflow:hidden}
+.brand-badge{width:2.1rem;height:2.1rem;display:grid;place-items:center;border-radius:9999px;background:linear-gradient(135deg,rgba(46,68,52,.95),rgba(74,107,83,.95));color:var(--primary);flex-shrink:0;overflow:hidden}
+.brand-badge img{width:100%;height:100%;object-fit:cover;border-radius:9999px}
+.brand-text{min-width:0;overflow:hidden}
+.brand-name{font-family:var(--font-display);font-weight:600;font-size:.9375rem;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.brand-sub{font-size:.6rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+
+.nav-links{display:none;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--muted);font-size:.875rem;transition:color .2s}
 .nav-links a:hover{color:var(--fg)}
-.nav-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:var(--wa-fg);padding:.5rem 1rem;border-radius:9999px;font-size:.875rem;font-weight:500;box-shadow:var(--shadow-soft)}
-.nav-cta:hover{transform:scale(1.04)}
-@media(min-width:768px){ .nav-links{display:flex} }
+@media(min-width:900px){.nav-links{display:flex}}
 
-/* HERO */
-.hero{position:relative;overflow:hidden;padding:7rem 0 5rem;background:var(--grad-hero)}
-.blob{position:absolute;border-radius:9999px;filter:blur(80px);z-index:0;pointer-events:none}
-.blob-1{top:-8rem;left:-8rem;width:24rem;height:24rem;background:rgba(74,107,83,.18)}
-.blob-2{bottom:-8rem;right:-8rem;width:24rem;height:24rem;background:rgba(231,217,192,.55)}
-.hero-grid{position:relative;display:grid;gap:3rem;align-items:center}
-.hero h1{font-size:clamp(2.25rem,5.5vw,3.75rem);margin-top:1.25rem}
-.hero h1 em{font-style:normal;color:var(--primary)}
-.hero .lead{margin-top:1.5rem;max-width:36rem;color:var(--muted);font-size:1.0625rem}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
-.indicators{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem .75rem;color:var(--muted);font-size:.875rem}
-.indicators li{display:flex;align-items:center;gap:.5rem;list-style:none}
-.indicators .icon{color:var(--primary)}
-.hero-photo-wrap{position:relative;max-width:28rem;margin:0 auto;width:100%}
-.hero-photo-wrap::before{content:"";position:absolute;inset:-1.5rem;background:rgba(74,107,83,.12);border-radius:2.5rem;filter:blur(40px);z-index:-1}
-.hero-photo{border-radius:2rem;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-elegant)}
-.hero-photo img{width:100%;height:auto;object-fit:cover}
-.float-card{position:absolute;background:rgba(255,253,247,.95);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:1rem;padding:.75rem 1rem;box-shadow:var(--shadow-soft);display:none;align-items:center;gap:.75rem}
-.float-card.left{bottom:-1.5rem;left:-1.5rem}
-.float-card.right{top:-1.25rem;right:-1rem}
-.float-card .ic{width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-size:1.1rem}
-.float-card.right .ic{background:var(--accent);color:#5e4a2a}
-.float-card .small{font-size:.7rem;color:var(--muted)}
-.float-card .big{font-size:.875rem;font-weight:600;color:var(--fg)}
-@media(min-width:768px){
-  .hero-grid{grid-template-columns:1.1fr .9fr;gap:4rem}
-  .indicators{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
-  .float-card{display:flex}
+.hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:2.35rem;height:2.35rem;background:transparent;border:0;cursor:pointer;padding:.25rem;border-radius:.5rem;flex-shrink:0}
+.hamburger span{display:block;width:1.1rem;height:2px;background:var(--fg);border-radius:2px;transition:all .3s ease;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(min-width:900px){.hamburger{display:none}}
+
+.mobile-menu{position:fixed;top:3.75rem;left:0;right:0;bottom:0;background:rgba(247,245,239,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:99;display:flex;flex-direction:column;padding:2rem 1.5rem;gap:0;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu nav{display:flex;flex-direction:column;gap:.25rem}
+.mobile-menu nav a{font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--fg);padding:.75rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.mobile-menu nav a:last-child{border-bottom:0}
+.mobile-menu nav a::after{content:"→";font-family:var(--font-sans);font-size:1rem;color:var(--muted)}
+.mobile-menu .menu-cta{margin-top:2rem}
+.mobile-menu .menu-cta .btn{font-size:1rem;padding:1rem 1.5rem}
+@media(min-width:900px){.mobile-menu{display:none !important}}
+
+@media(max-width:360px){
+  .nav-inner{height:3.25rem}
+  .mobile-menu{top:3.25rem}
+  .brand-sub{display:none}
+  .brand-badge{width:1.85rem;height:1.85rem}
+  .hamburger{width:2.1rem;height:2.1rem;padding:.2rem}
+  .hamburger span{width:1rem}
+  .container{padding:0 1rem}
 }
 
-/* SECTIONS */
-section{padding:5rem 0}
-@media(min-width:768px){section{padding:7rem 0}}
-.center{text-align:center;max-width:36rem;margin:0 auto}
-.center h2,.section-title{font-size:clamp(1.875rem,3.5vw,2.5rem);margin-top:.75rem}
-.center p{margin-top:1rem;color:var(--muted)}
+/* ── HERO ─────────────────────────────────────────────────────── */
+.hero{position:relative;overflow:hidden;padding:5.5rem 0 3.5rem;background:var(--grad-hero)}
+@media(min-width:768px){.hero{padding:7rem 0 5rem}}
+.blob{position:absolute;border-radius:9999px;filter:blur(80px);z-index:0;pointer-events:none;animation:blobmove 9s ease-in-out infinite}
+.blob-1{top:-6rem;left:-6rem;width:20rem;height:20rem;background:rgba(74,107,83,.18)}
+.blob-2{bottom:-6rem;right:-6rem;width:20rem;height:20rem;background:rgba(231,217,192,.55);animation-delay:1.5s}
+@keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(15px,-15px) scale(1.08)}}
+.hero-inner{position:relative;z-index:1;display:grid;gap:2.5rem;align-items:center}
+@media(min-width:768px){.hero-inner{grid-template-columns:1.1fr .9fr;gap:3rem}}
+@media(min-width:1024px){.hero-inner{gap:3.5rem}}
 
-/* SOBRE */
-.sobre-grid{display:grid;gap:3rem;align-items:center}
+.hero-text{text-align:center}
+@media(min-width:768px){.hero-text{text-align:left}}
+.hero-text h1{font-size:clamp(2rem,6vw,3.5rem);margin-top:1rem;max-width:22rem;margin-left:auto;margin-right:auto}
+@media(min-width:768px){.hero-text h1{margin-left:0;margin-right:0;max-width:none}}
+.hero-text h1 em{font-style:normal;color:var(--primary)}
+.hero-lead{margin-top:1.25rem;color:var(--muted);font-size:1rem;max-width:34rem;margin-left:auto;margin-right:auto}
+@media(min-width:768px){.hero-lead{margin-left:0;margin-right:0;font-size:1.0625rem;max-width:30rem}}
+.hero-ctas{margin-top:1.75rem}
+.hero-indicators{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem .75rem;list-style:none;max-width:26rem;margin-left:auto;margin-right:auto}
+@media(min-width:480px){.hero-indicators{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:center}}
+@media(min-width:768px){.hero-indicators{justify-content:flex-start;margin-left:0;margin-right:0}}
+.hero-indicators li{display:flex;align-items:center;gap:.4rem;color:var(--muted);font-size:.8125rem}
+.hero-indicators .icon{color:var(--primary)}
+
+.hero-photo-wrap{position:relative;max-width:22rem;margin:0 auto;width:100%}
+@media(min-width:768px){.hero-photo-wrap{max-width:none;margin:0}}
+.hero-photo-wrap::before{content:"";position:absolute;inset:-1.5rem;background:rgba(74,107,83,.1);border-radius:2.5rem;filter:blur(40px);z-index:-1}
+.hero-photo{border-radius:1.75rem;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-elegant)}
+.hero-photo img{width:100%;height:auto;object-fit:cover}
+.float-card{position:absolute;background:rgba(255,253,247,.95);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:1rem;padding:.65rem .9rem;box-shadow:var(--shadow-soft);display:none;align-items:center;gap:.65rem;max-width:calc(100% - 1rem);animation:floaty 4.5s ease-in-out infinite}
+@media(min-width:480px){.float-card{display:flex}}
+.float-card.right{animation-delay:.5s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float-card.left{bottom:-1.25rem;left:-1rem}
+.float-card.right{top:-1rem;right:-.75rem}
+.float-card .fic{width:2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);flex-shrink:0}
+.float-card.right .fic{background:var(--accent);color:#5e4a2a}
+.float-card .fsmall{font-size:.68rem;color:var(--muted);white-space:nowrap}
+.float-card .fbig{font-size:.8125rem;font-weight:600;color:var(--fg);white-space:nowrap}
+
+/* ── SOBRE ────────────────────────────────────────────────────── */
+.sobre-grid{display:grid;gap:2.5rem;align-items:center}
 @media(min-width:768px){.sobre-grid{grid-template-columns:1fr 1fr;gap:4rem}}
 .sobre-img{border-radius:1.5rem;border:1px solid var(--border);box-shadow:var(--shadow-soft);width:100%;height:auto;object-fit:cover}
-.sobre p{color:var(--muted);margin-top:1rem;line-height:1.7}
-.sobre strong{color:var(--fg)}
-.stats{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
-.stat-n{font-family:var(--font-display);font-size:1.875rem;font-weight:600;color:var(--primary)}
+.sobre-text p{color:var(--muted);margin-top:1rem;line-height:1.75}
+.sobre-text strong{color:var(--fg)}
+.sobre-title{font-size:clamp(1.625rem,3.5vw,2.25rem);margin-top:.75rem}
+.stats{display:flex;flex-wrap:wrap;gap:1.5rem 2rem;margin-top:1.75rem}
+.stat-n{font-family:var(--font-display);font-size:1.75rem;font-weight:600;color:var(--primary)}
 .stat-l{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 
-/* CARDS GRID */
-.bg-soft{background:rgba(239,234,221,.5)}
-.grid-4{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:3.5rem}
-@media(min-width:640px){.grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
-.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;height:100%;transition:all .3s ease}
-.card:hover{transform:translateY(-4px);border-color:rgba(74,107,83,.3);box-shadow:var(--shadow-soft)}
-.card .ic{width:3rem;height:3rem;display:grid;place-items:center;border-radius:.75rem;background:rgba(74,107,83,.12);color:var(--primary);font-size:1.25rem;transition:all .3s ease}
-.card:hover .ic{background:var(--primary);color:var(--primary-fg)}
-.card h3{margin-top:1.25rem;font-size:1.125rem;font-weight:600}
-.card p{margin-top:.5rem;font-size:.875rem;color:var(--muted);line-height:1.6}
+/* ── BG ALTERNADO ─────────────────────────────────────────────── */
+.bg-soft{background:rgba(239,234,221,.45)}
 
-.grid-3{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:3.5rem}
-@media(min-width:640px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
-.benefit{display:flex;gap:1rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;transition:box-shadow .25s}
-.benefit:hover{box-shadow:var(--shadow-soft)}
-.benefit .ic{width:2.75rem;height:2.75rem;flex-shrink:0;display:grid;place-items:center;border-radius:9999px;background:var(--accent);color:#5e4a2a;font-size:1.1rem}
-.benefit h3{font-size:1.125rem;font-weight:600}
-.benefit p{font-size:.875rem;color:var(--muted);margin-top:.25rem}
+/* ── SECTION HEADER ───────────────────────────────────────────── */
+.sec-head{margin-bottom:2.5rem}
+.sec-head h2{font-size:clamp(1.625rem,3.5vw,2.25rem);margin-top:.625rem}
+.sec-head p{margin-top:.75rem;color:var(--muted);max-width:36rem}
+@media(min-width:768px){
+  .center .sec-head p{margin-left:auto;margin-right:auto}
+}
 
-/* TIMELINE */
-.timeline{position:relative;max-width:56rem;margin:4rem auto 0}
-.timeline::before{content:"";position:absolute;left:1.5rem;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(74,107,83,.4),rgba(74,107,83,.15),transparent);display:none}
-@media(min-width:768px){.timeline::before{left:50%;display:block}}
-.step{position:relative;display:grid;gap:1.5rem;align-items:center;margin-bottom:2.5rem}
-@media(min-width:768px){.step{grid-template-columns:1fr 1fr}}
-.step .text{padding:0}
-@media(min-width:768px){.step .text{padding:0 2.5rem;text-align:right}}
-.step .n{font-family:var(--font-display);font-size:3rem;font-weight:600;color:rgba(74,107,83,.3);line-height:1}
-.step h3{margin-top:.5rem;font-size:1.25rem;font-weight:600}
-.step p{margin-top:.5rem;font-size:.875rem;color:var(--muted);line-height:1.6}
-.step .dot{display:none;justify-content:center}
-@media(min-width:768px){.step .dot{display:flex}}
-.step .dot span{width:3rem;height:3rem;display:grid;place-items:center;border-radius:9999px;background:var(--primary);color:var(--primary-fg);border:4px solid var(--bg);box-shadow:var(--shadow-soft);z-index:1;font-size:1.1rem}
-.step.alt .text{order:2;text-align:left}
-.step.alt .dot{order:1}
-.cta-center{margin-top:3rem;text-align:center}
+/* ── GRID TEMAS (4 cols) ──────────────────────────────────────── */
+.grid-4{display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+.grid-4>.reveal{height:100%;min-width:0}
+@media(min-width:900px){.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.25rem;transition:all .3s ease;height:100%;display:flex;flex-direction:column;min-width:0;overflow-wrap:break-word}
+@media(min-width:768px){.card{padding:1.5rem}}
+.card:hover{transform:translateY(-3px);border-color:rgba(74,107,83,.3);box-shadow:var(--shadow-soft)}
+.card .cic{width:2.75rem;height:2.75rem;display:grid;place-items:center;border-radius:.75rem;background:rgba(74,107,83,.1);color:var(--primary);font-size:1.2rem;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
+.card:hover .cic{background:var(--primary);color:var(--primary-fg);transform:scale(1.12) rotate(-4deg)}
+.card h3{margin-top:1rem;font-size:1rem;font-weight:600}
+@media(min-width:768px){.card h3{font-size:1.0625rem}}
+.card p{margin-top:.375rem;font-size:.8125rem;color:var(--muted);line-height:1.6}
 
-/* DEPOIMENTOS */
-.testimonials{display:grid;gap:1.25rem;grid-template-columns:1fr;margin-top:3.5rem}
-@media(min-width:768px){.testimonials{grid-template-columns:repeat(3,1fr)}}
-.testimonial{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.75rem;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;height:100%}
-.stars{color:var(--primary);display:flex;gap:2px;font-size:1rem}
-.stars .icon{fill:currentColor}
-.testimonial blockquote{margin-top:1rem;font-family:var(--font-display);font-size:1.0625rem;line-height:1.6;color:var(--fg);flex:1}
-.testimonial figcaption{margin-top:1.5rem;display:flex;align-items:center;gap:.75rem}
-.testimonial .avatar{width:2.5rem;height:2.5rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-weight:600}
-.testimonial .who{font-size:.875rem;font-weight:600}
-.testimonial .role{font-size:.75rem;color:var(--muted)}
+/* ── GRID BENEFÍCIOS (3 cols) ─────────────────────────────────── */
+.grid-3{display:grid;gap:.875rem;grid-template-columns:1fr;width:100%}
+@media(min-width:480px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.benefit{display:flex;gap:.875rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.25rem;transition:box-shadow .25s,transform .25s;min-width:0}
+.benefit:hover{box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+.benefit .bic{width:2.5rem;height:2.5rem;flex-shrink:0;display:grid;place-items:center;border-radius:9999px;background:var(--accent);color:#5e4a2a;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.benefit:hover .bic{transform:scale(1.1)}
+.benefit h3{font-size:1rem;font-weight:600}
+.benefit p{font-size:.8125rem;color:var(--muted);margin-top:.2rem;line-height:1.5}
 
-/* FAQ */
-.faq-wrap{max-width:48rem;margin:0 auto}
-.faq-list{margin-top:3rem;display:flex;flex-direction:column;gap:.75rem}
+/* ── TIMELINE (passos) ────────────────────────────────────────── */
+.steps{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;width:100%}
+.steps>.reveal{height:100%;min-width:0}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:1.25rem;padding:1.5rem;display:flex;gap:1.25rem;align-items:flex-start;height:100%;min-width:0}
+.step-num{font-family:var(--font-display);font-size:2rem;font-weight:600;color:rgba(74,107,83,.25);line-height:1;flex-shrink:0;min-width:2.5rem}
+.step-icon{width:2.75rem;height:2.75rem;display:grid;place-items:center;border-radius:9999px;background:var(--primary);color:var(--primary-fg);flex-shrink:0}
+.step-card h3{font-size:1.0625rem;font-weight:600}
+.step-card p{font-size:.875rem;color:var(--muted);margin-top:.375rem;line-height:1.6}
+@media(min-width:768px){.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}}
+
+/* ── DEPOIMENTOS ──────────────────────────────────────────────── */
+.testimonials{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:2rem;width:100%}
+.testimonials>.reveal{height:100%;min-width:0}
+@media(min-width:640px){.testimonials{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.testimonials{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.5rem;display:flex;flex-direction:column;height:100%;min-width:0}
+.stars{color:var(--primary);display:flex;gap:2px;margin-bottom:.875rem}
+.stars svg{fill:currentColor;width:.9rem;height:.9rem}
+.testimonial blockquote{font-family:var(--font-display);font-size:1rem;line-height:1.65;color:var(--fg);flex:1}
+.testimonial figcaption{margin-top:1.25rem;display:flex;align-items:center;gap:.75rem}
+.t-avatar{width:2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:9999px;background:rgba(74,107,83,.12);color:var(--primary);font-weight:600;font-size:.875rem;flex-shrink:0}
+.t-who{font-size:.875rem;font-weight:600}
+.t-role{font-size:.75rem;color:var(--muted)}
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+.faq-list{display:flex;flex-direction:column;gap:.625rem;margin-top:2rem}
 .faq-item{background:var(--card);border:1px solid var(--border);border-radius:1rem;overflow:hidden}
-.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.5rem;background:transparent;border:0;cursor:pointer;text-align:left;color:inherit;font:inherit}
-.faq-q span{font-family:var(--font-display);font-weight:600;font-size:1.0625rem}
-.faq-q .icon{color:var(--primary);font-size:1.25rem;transition:transform .3s}
-.faq-item.open .faq-q .icon{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.5rem}
-.faq-item.open .faq-a{max-height:400px;padding-bottom:1.25rem}
-.faq-a p{font-size:.9rem;color:var(--muted);line-height:1.7}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.25rem;background:transparent;border:0;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.faq-q span{font-family:var(--font-display);font-weight:600;font-size:.9375rem;line-height:1.3}
+.faq-chevron{color:var(--primary);flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a p{font-size:.875rem;color:var(--muted);line-height:1.7;padding:.25rem 1.25rem 1.25rem}
 
-/* CTA FINAL */
-.cta-final{position:relative;overflow:hidden;padding:6rem 0;color:#fff;text-align:center}
-.cta-final-bg{position:absolute;inset:0;background:var(--grad-cta);z-index:-1}
-.cta-final h2{font-size:clamp(2rem,4.5vw,3rem);margin-top:1.25rem}
-.cta-final p{max-width:36rem;margin:1.5rem auto 0;color:rgba(255,255,255,.88);font-size:1.0625rem;line-height:1.65}
-.cta-final .tag{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.1)}
+/* ── CTA FINAL ────────────────────────────────────────────────── */
+.cta-final{position:relative;overflow:hidden;padding:4.5rem 0;color:#fff;text-align:center;background:var(--grad-cta);width:100%}
+@media(min-width:768px){.cta-final{padding:6rem 0}}
+.cta-final .tag{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.12)}
 .cta-final .tag .icon{color:#fff}
-.cta-final .btn-final{margin-top:2.5rem;background:#fff;color:var(--primary);padding:1rem 2rem;font-size:1rem;box-shadow:var(--shadow-elegant);display:inline-flex;align-items:center;gap:.5rem;border-radius:9999px;font-weight:600;border:0;cursor:pointer}
-.cta-final .btn-final:hover{transform:translateY(-2px)}
+.cta-final h2{font-size:clamp(1.75rem,4.5vw,2.75rem);margin-top:1rem}
+.cta-final p{max-width:34rem;margin:1.25rem auto 0;color:rgba(255,255,255,.85);font-size:1rem;line-height:1.7}
+@media(min-width:768px){.cta-final p{font-size:1.0625rem}}
+.cta-final .btn-area{margin-top:2rem;display:flex;justify-content:center}
+.btn-final{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:#fff;color:var(--primary);padding:.95rem 2rem;font-size:1rem;font-weight:600;border-radius:9999px;border:0;cursor:pointer;box-shadow:var(--shadow-elegant);transition:transform .2s;width:100%;max-width:22rem}
+@media(min-width:480px){.btn-final{width:auto;max-width:none}}
+.btn-final:hover{transform:translateY(-2px)}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);background:var(--bg);padding:3.5rem 0 1.5rem}
-.foot-grid{display:grid;gap:2.5rem;grid-template-columns:1fr}
-@media(min-width:768px){.foot-grid{grid-template-columns:repeat(3,1fr)}}
-.foot-h{font-family:var(--font-display);font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
-.foot ul{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
-.foot a{color:var(--muted);font-size:.875rem;display:inline-flex;align-items:center;gap:.5rem}
+/* ── FOOTER ───────────────────────────────────────────────────── */
+.foot{border-top:1px solid var(--border);background:var(--bg);padding:3rem 0 1.5rem}
+.foot-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:640px){.foot-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.foot-grid{grid-template-columns:repeat(3,1fr)}}
+.foot-h{font-family:var(--font-display);font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.875rem}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.foot a{color:var(--muted);font-size:.875rem;display:inline-flex;align-items:center;gap:.45rem;transition:color .2s}
 .foot a:hover{color:var(--primary)}
-.foot-bottom{text-align:center;color:var(--muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2.5rem;padding-top:1.5rem}
+.foot-bottom{text-align:center;color:var(--muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2.5rem;padding-top:1.5rem;line-height:1.6}
+.foot-credit{display:inline-flex;align-items:center;gap:.3rem;transition:color .2s}
+.foot-credit:hover{color:var(--primary)}
+.foot-credit .icon{width:.8em;height:.8em}
 
-/* FLOATING WHATSAPP */
-.fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:50;width:3.5rem;height:3.5rem;display:grid;place-items:center;border-radius:9999px;background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);font-size:1.4rem;transition:transform .2s}
+/* ── FAB WHATSAPP ─────────────────────────────────────────────── */
+.fab{position:fixed;bottom:1.25rem;right:1.25rem;z-index:50;width:3.25rem;height:3.25rem;display:grid;place-items:center;border-radius:9999px;background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);font-size:1.35rem;transition:transform .2s;animation:fabbreathe 2.6s ease-in-out infinite}
+@keyframes fabbreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media(min-width:768px){.fab{bottom:1.75rem;right:1.75rem;width:3.5rem;height:3.5rem}}
 .fab:hover{transform:scale(1.1)}
-.fab::before{content:"";position:absolute;inset:0;border-radius:9999px;animation:pulseRing 2.2s cubic-bezier(.4,0,.6,1) infinite}
-@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,163,106,.5)}70%{box-shadow:0 0 0 16px rgba(37,163,106,0)}100%{box-shadow:0 0 0 0 rgba(37,163,106,0)}}
+.fab::before{content:"";position:absolute;inset:0;border-radius:9999px;animation:pulse 2.2s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,163,106,.5)}70%{box-shadow:0 0 0 16px rgba(37,163,106,0)}100%{box-shadow:0 0 0 0 rgba(37,163,106,0)}}
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+/* ── REVEAL ───────────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
 <script>
-// ── CONFIGURAÇÃO — edite apenas aqui ──────────────────────────────────────────
-const WHATSAPP_NUMBER = "5500000000000"; // TODO: troque pelo número real (só dígitos)
-const WHATSAPP_MSG    = encodeURIComponent("Olá Lucileide, gostaria de agendar uma sessão de psicoterapia online.");
-const WHATSAPP_URL    = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
-const INSTAGRAM_URL   = "https://instagram.com/"; // TODO: troque pelo perfil real
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("keydown", e => {
+  const k = e.key ? e.key.toUpperCase() : "";
+  const blocked =
+    k === "F12" ||
+    (e.ctrlKey && k === "U") ||
+    (e.ctrlKey && e.shiftKey && (k === "I" || k === "J" || k === "C"));
+  if (blocked) e.preventDefault();
+});
+</script>
 
-const IMG_SOBRE    = "https://a.imagem.app/GezZ4a.png";
-const IMG_PSICOLOGA = "https://a.imagem.app/GezRcY.png";
+<script>
+/* ════════════════════════════════════════════════════════════════
+   DADOS PADRÃO — edite o config.json para sobrescrever sem
+   tocar neste HTML.
+════════════════════════════════════════════════════════════════ */
+const DEFAULT_DATA = {
+  seo: {
+    title: "Lucileide Costa | Psicóloga Clínica & Avaliação Psicológica — CRP 01/9096",
+    description: "Psicoterapia online e avaliação psicológica com Lucileide Maria Cardoso Costa. Mais de 20 anos de experiência em ansiedade, psicologia do trânsito, AP para concursos e avaliação para neurodivergentes."
+  },
+  contato: {
+    whatsappNumero: "5500000000000",
+    whatsappMensagem: "Olá Lucileide, gostaria de agendar uma sessão de psicoterapia online.",
+    instagramUrl: "https://instagram.com/"
+  },
+  imagens: {
+    logo: "https://a.imagem.app/GeYjYX.png",
+    fotoPerfil: "https://a.imagem.app/GezRcY.png",
+    fotoSobre: "https://a.imagem.app/GezZ4a.png"
+  },
+  marca: {
+    nomeExibicao: "Lucileide Costa",
+    nomeCompleto: "Lucileide Maria Cardoso Costa",
+    crp: "CRP 01/9096",
+    subtituloHeader: "Psicóloga · CRP 01/9096",
+    subtituloFooter: "Psicóloga Clínica · CRP 01/9096"
+  },
+  hero: {
+    tag: "Psicoterapia & Avaliação Psicológica · CRP 01/9096",
+    tituloHtml: "Psicologia para quem busca mais <em>equilíbrio emocional</em> e qualidade de vida.",
+    texto: "Mais de 20 anos de experiência em psicoterapia, psicologia do trânsito e avaliação psicológica, com escuta ética, humanizada e baseada em evidências.",
+    indicadores: [
+      { icon: "laptop",        texto: "Atendimento Online" },
+      { icon: "shield-check",  texto: "CRP 01/9096" },
+      { icon: "award",         texto: "+20 anos de experiência" },
+      { icon: "globe",         texto: "Todo o Brasil" }
+    ]
+  },
+  sobre: {
+    eyebrow: "Sobre a Psicóloga",
+    titulo: "Um espaço seguro para você se reencontrar.",
+    paragrafos: [
+      "Sou <strong>Lucileide Maria Cardoso Costa</strong>, psicóloga formada em 2002, em Belém do Pará, com mais de duas décadas de experiência clínica. Atuo em <strong>avaliação psicológica para procedimentos cirúrgicos</strong>, como cirurgia bariátrica e vasectomia, na elaboração de <strong>laudos de aptidão para concursos públicos</strong> e sou especialista em <strong>Psicologia do Trânsito</strong>.",
+      "Na psicoterapia, acompanho principalmente pessoas que lidam com <strong>ansiedade</strong> e <strong>medo de dirigir</strong>, ajudando a reconstruir a confiança no dia a dia. Também tenho experiência em avaliação psicológica para pessoas neurodivergentes e já palestrei sobre gerenciamento de estresse para instituições bancárias.",
+      "Minha abordagem teórica é <strong>comportamental</strong>, com ênfase na <strong>Terapia Cognitivo-Comportamental (TCC)</strong> — uma abordagem estruturada, prática e baseada em evidências científicas —, aliada a uma escuta humana, ética e sem julgamentos, para que você se compreenda melhor e construa, no seu tempo, mais equilíbrio e qualidade de vida."
+    ],
+    stats: [
+      { numero: "20+",  label: "Anos de experiência" },
+      { numero: "2002", label: "Formada em Belém-PA" },
+      { numero: "BR",   label: "Atendimento em todo o Brasil" }
+    ]
+  },
+  temasEyebrow: "Como posso ajudar",
+  temasTitulo: "Áreas de atuação",
+  temasDescricao: "Psicoterapia e avaliação psicológica conduzidas com ética, técnica e acolhimento.",
+  temas: [
+    { icon:"brain",     t:"Ansiedade",                        d:"Compreender e regular sentimentos de inquietação e medo." },
+    { icon:"car",       t:"Medo de Dirigir",                  d:"Atendimento especializado em Psicologia do Trânsito." },
+    { icon:"clipboard", t:"AP para Cirurgias",                d:"Avaliação psicológica e laudo para bariátrica, vasectomia e outros procedimentos cirúrgicos." },
+    { icon:"award",     t:"AP para Concursos",                d:"Laudo de aptidão psicológica para concursos públicos e processos seletivos." },
+    { icon:"infinity",  t:"Avaliação para Neurodivergentes",  d:"Avaliação psicológica acolhedora e respeitosa." },
+    { icon:"users",     t:"Gerenciamento de Estresse",        d:"Palestras corporativas, já realizadas para bancos." },
+    { icon:"heart",     t:"Autoestima",                       d:"Reconstruir uma relação mais saudável consigo mesmo(a)." },
+    { icon:"sparkles",  t:"Autoconhecimento",                 d:"Compreender padrões, emoções e novas possibilidades." }
+  ],
+  beneficiosEyebrow: "Terapia Online",
+  beneficiosTitulo: "Os benefícios do atendimento à distância",
+  beneficios: [
+    { icon:"home",         t:"Conforto",          d:"Atenda de casa, do seu lugar favorito." },
+    { icon:"lock",         t:"Privacidade",       d:"Sigilo absoluto, ambiente seguro." },
+    { icon:"calendar",     t:"Flexibilidade",     d:"Horários que cabem na sua rotina." },
+    { icon:"globe",        t:"De qualquer lugar", d:"Atendimento em todo o Brasil." },
+    { icon:"shield-check", t:"Segurança",         d:"Plataformas criptografadas." },
+    { icon:"clock",        t:"Praticidade",       d:"Sem deslocamento, sem trânsito." }
+  ],
+  passosEyebrow: "Como Funciona",
+  passosTitulo: "Três passos simples para começar",
+  passos: [
+    { n:"01", icon:"message",  t:"Primeiro contato pelo WhatsApp", d:"Você envia uma mensagem, conta brevemente o que está buscando e tira suas dúvidas." },
+    { n:"02", icon:"calendar", t:"Agendamento da sessão",          d:"Combinamos o melhor horário e enviamos as orientações necessárias para o atendimento." },
+    { n:"03", icon:"heart",    t:"Início do acompanhamento",       d:"Sessões periódicas em um espaço seguro, ético e acolhedor para o seu processo." }
+  ],
+  depoimentosEyebrow: "Depoimentos",
+  depoimentosTitulo: "Histórias de quem encontrou cuidado aqui",
+  depoimentos: [
+    { n:"M. R.", t:"Encontrei um espaço de escuta verdadeira. A terapia mudou a forma como lido com minha ansiedade no dia a dia." },
+    { n:"A. S.", t:"Eu tinha muito medo de dirigir e, com o acompanhamento, recuperei minha confiança ao volante." },
+    { n:"C. L.", t:"Profissional sensível, ética e muito preparada. Me senti acolhida em cada sessão." }
+  ],
+  faqEyebrow: "Perguntas Frequentes",
+  faqTitulo: "Tire suas dúvidas",
+  faqs: [
+    { q:"Como funciona a terapia online?",                                 a:"As sessões acontecem por chamada de vídeo em plataforma segura. Você só precisa de internet estável, um ambiente reservado e um dispositivo com câmera e microfone." },
+    { q:"Quanto tempo dura uma sessão?",                                   a:"Cada sessão tem duração média de 50 minutos e, geralmente, é realizada semanalmente — podendo ser ajustada conforme a sua necessidade." },
+    { q:"Como faço o pagamento?",                                          a:"O pagamento é feito por Pix ou transferência bancária, antes de cada sessão. Os valores e formas são combinados no primeiro contato." },
+    { q:"O atendimento é sigiloso?",                                       a:"Sim. O sigilo é garantido pelo Código de Ética do Psicólogo e tudo o que é tratado em sessão ou avaliação é confidencial." },
+    { q:"O que é a Avaliação Psicológica (AP) e quando ela é necessária?", a:"A AP é um processo técnico que reúne entrevistas, testes e observações para elaborar um laudo psicológico, exigido em situações como concursos públicos, cirurgia bariátrica, vasectomia e outros procedimentos cirúrgicos. O formato depende dos instrumentos exigidos em cada caso, e isso é explicado no primeiro contato." },
+    { q:"Você atende medo de dirigir e avaliação para neurodivergentes?",  a:"Sim. Sou especialista em Psicologia do Trânsito, com experiência em psicoterapia para medo de dirigir, e também realizo avaliação psicológica de forma acolhedora e respeitosa para pessoas neurodivergentes." },
+    { q:"Qual é a abordagem teórica utilizada nas sessões?",               a:"Minha abordagem é comportamental, com ênfase na Terapia Cognitivo-Comportamental (TCC), o que permite um trabalho estruturado, prático e baseado em evidências científicas, adaptado às necessidades de cada paciente." }
+  ],
+  footer: {
+    institucional: ["Política de Privacidade", "Termos de Uso"],
+    desenvolvidoPor: { texto: "Desenvolvido por GTI Soluções em Informática", url: "https://wa.me/5561999118365" }
+  }
+};
 
-const temas = [
-  { icon:"brain",        t:"Ansiedade",               d:"Compreender e regular sentimentos de inquietação e medo." },
-  { icon:"sun",          t:"Estresse",                d:"Estratégias para lidar com a sobrecarga do dia a dia." },
-  { icon:"heart",        t:"Autoestima",              d:"Reconstruir uma relação mais saudável consigo mesmo(a)." },
-  { icon:"users",        t:"Relacionamentos",         d:"Vínculos mais conscientes, afetivos e equilibrados." },
-  { icon:"sparkles",     t:"Autoconhecimento",        d:"Compreender padrões, emoções e novas possibilidades." },
-  { icon:"leaf",         t:"Sobrecarga emocional",    d:"Acolhimento para fases de exaustão e cansaço." },
-  { icon:"trending-up",  t:"Qualidade de vida",       d:"Hábitos e escolhas que sustentam o bem-estar." },
-  { icon:"award",        t:"Desenvolvimento pessoal", d:"Crescimento contínuo, com clareza e propósito." },
-];
+let DATA = DEFAULT_DATA;
 
-const beneficios = [
-  { icon:"home",         t:"Conforto",         d:"Atenda de casa, do seu lugar favorito." },
-  { icon:"lock",         t:"Privacidade",      d:"Sigilo absoluto, ambiente seguro." },
-  { icon:"calendar",     t:"Flexibilidade",    d:"Horários que cabem na sua rotina." },
-  { icon:"globe",        t:"De qualquer lugar",d:"Atendimento em todo o Brasil." },
-  { icon:"shield-check", t:"Segurança",        d:"Plataformas criptografadas." },
-  { icon:"clock",        t:"Praticidade",      d:"Sem deslocamento, sem trânsito." },
-];
+async function loadData() {
+  try {
+    const res = await fetch("config.json?v=" + Date.now(), { cache: "no-store" });
+    if (res.ok) {
+      const json = await res.json();
+      DATA = deepMerge(DEFAULT_DATA, json);
+    }
+  } catch (e) {
+    console.warn("config.json não pôde ser carregado, usando dados padrão.", e);
+  }
+}
 
-const passos = [
-  { n:"01", icon:"message",  t:"Primeiro contato pelo WhatsApp", d:"Você envia uma mensagem, conta brevemente o que está buscando e tira suas dúvidas." },
-  { n:"02", icon:"calendar", t:"Agendamento da sessão",          d:"Combinamos o melhor horário e enviamos as orientações para a sua primeira consulta online." },
-  { n:"03", icon:"heart",    t:"Início do acompanhamento",       d:"Sessões semanais por vídeo, em um espaço seguro e acolhedor para o seu processo." },
-];
+function deepMerge(base, override) {
+  if (Array.isArray(override)) return override;
+  if (override && typeof override === "object") {
+    const out = { ...base };
+    for (const k in override) {
+      out[k] = (base && typeof base[k] === "object") ? deepMerge(base[k], override[k]) : override[k];
+    }
+    return out;
+  }
+  return override === undefined ? base : override;
+}
 
-const depoimentos = [
-  { n:"M. R.", t:"Encontrei um espaço de escuta verdadeira. A terapia mudou a forma como me relaciono comigo mesma." },
-  { n:"A. S.", t:"Lucileide tem uma escuta atenta e acolhedora. Hoje me sinto mais leve e no controle das minhas emoções." },
-  { n:"C. L.", t:"Profissional sensível e ética. Aprendi a lidar com minha ansiedade de uma forma que nunca imaginei." },
-];
-
-const faqs = [
-  { q:"Como funciona a terapia online?",        a:"As sessões acontecem por chamada de vídeo em plataforma segura. Você só precisa de internet estável, um ambiente reservado e um dispositivo com câmera e microfone." },
-  { q:"Quanto tempo dura uma sessão?",          a:"Cada sessão tem duração média de 50 minutos e, geralmente, é realizada semanalmente — podendo ser ajustada conforme a sua necessidade." },
-  { q:"Como faço o pagamento?",                 a:"O pagamento é feito por Pix ou transferência bancária, antes de cada sessão. Os valores e formas são combinados no primeiro contato." },
-  { q:"O atendimento é sigiloso?",              a:"Sim. O sigilo é garantido pelo Código de Ética do Psicólogo e tudo o que é falado em sessão é totalmente confidencial." },
-  { q:"Posso fazer terapia de qualquer cidade?",a:"Sim. O atendimento é 100% online, para qualquer cidade do Brasil ou brasileiros que residem no exterior." },
-];
-
-// ── SVG Icons ─────────────────────────────────────────────────────────────────
-const icons = {
+/* ── SVG ICONS ────────────────────────────────────────────────── */
+const ICONS = {
   brain:          '<path d="M12 5a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0-3 3 3 3 0 0 0 1 2.2A3 3 0 0 0 5 14a3 3 0 0 0 2 2.8A3 3 0 0 0 10 19a3 3 0 0 0 2-1V5z"/><path d="M12 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1 3 3 3 3 0 0 1-1 2.2A3 3 0 0 1 19 14a3 3 0 0 1-2 2.8A3 3 0 0 1 14 19a3 3 0 0 1-2-1V5z"/>',
   sun:            '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>',
   heart:          '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>',
@@ -266,104 +431,184 @@ const icons = {
   globe:          '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>',
   "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
   clock:          '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
-  message:        '<path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/>',
   "chevron-down": '<polyline points="6 9 12 15 18 9"/>',
-  instagram:      '<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.6-3.4A4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>',
-  star:           '<polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/>',
   "arrow-right":  '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
   laptop:         '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/>',
+  instagram:      '<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-4.6-3.4A4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>',
+  car:            '<path d="M5 11l1.6-4.8A2 2 0 0 1 8.5 5h7a2 2 0 0 1 1.9 1.2L19 11"/><rect x="3" y="11" width="18" height="6" rx="2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/>',
+  clipboard:      '<rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/>',
+  infinity:       '<ellipse cx="8.5" cy="12" rx="4" ry="3"/><ellipse cx="15.5" cy="12" rx="4" ry="3"/>',
 };
 
+const WA_PATHS = '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>';
+
 function ico(name, cls = "icon") {
-  const p = icons[name] || "";
-  return `<svg class="${cls}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+  if (name === "message") {
+    return `<svg class="${cls}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${WA_PATHS}</svg>`;
+  }
+  return `<svg class="${cls}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]||""}</svg>`;
 }
 
-function stars5() {
-  return Array(5).fill(`<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>`).join("");
+function waIcoSvg() {
+  return `<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${WA_PATHS}</svg>`;
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", () => {
+function stars5(){
+  return Array(5).fill(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>`).join("");
+}
 
-  // set all whatsapp links
+/* ── RENDER ───────────────────────────────────────────────────── */
+function render() {
+  const d = DATA;
+  const WHATSAPP_URL = `https://wa.me/${d.contato.whatsappNumero}?text=${encodeURIComponent(d.contato.whatsappMensagem)}`;
+  const INSTAGRAM_URL = d.contato.instagramUrl;
+  const LOGO_URL = d.imagens.logo;
+
+  // SEO
+  document.title = d.seo.title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", d.seo.title);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", d.seo.description);
+
+  // Logo dinâmica (favicon + apple-touch-icon)
+  const faviconEl = document.getElementById("favicon-link");
+  if (faviconEl) faviconEl.href = LOGO_URL;
+  const appleIconEl = document.getElementById("apple-touch-icon-link");
+  if (appleIconEl) appleIconEl.href = LOGO_URL;
+
+  // Links WA e IG
   document.querySelectorAll("[data-wa]").forEach(el => el.href = WHATSAPP_URL);
   document.querySelectorAll("[data-ig]").forEach(el => el.href = INSTAGRAM_URL);
-
-  // year
   document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
 
+  // MARCA
+  document.querySelectorAll("[data-brand-name]").forEach(el => el.textContent = d.marca.nomeExibicao);
+  document.querySelectorAll("[data-brand-sub-header]").forEach(el => el.textContent = d.marca.subtituloHeader);
+  document.querySelectorAll("[data-brand-sub-footer]").forEach(el => el.textContent = d.marca.subtituloFooter);
+
+  // LOGO — todas as imagens de logo no HTML (header + footer)
+  document.querySelectorAll("[data-img-logo]").forEach(el => {
+    el.src = LOGO_URL;
+    el.alt = "Logo " + d.marca.nomeExibicao;
+  });
+
+  // IMAGENS
+  document.querySelectorAll("[data-img-perfil]").forEach(el => {
+    el.src = d.imagens.fotoPerfil;
+    el.alt = d.marca.nomeExibicao + ", psicóloga clínica";
+  });
+  document.querySelectorAll("[data-img-sobre]").forEach(el => {
+    el.src = d.imagens.fotoSobre;
+  });
+
+  // HERO
+  const heroTagText = document.getElementById("hero-tag-text");
+  if (heroTagText) heroTagText.textContent = d.hero.tag;
+  const heroTitle = document.getElementById("hero-title");
+  if (heroTitle) heroTitle.innerHTML = d.hero.tituloHtml;
+  const heroLead = document.getElementById("hero-lead");
+  if (heroLead) heroLead.textContent = d.hero.texto;
+  const heroIndicators = document.getElementById("hero-indicators");
+  if (heroIndicators) heroIndicators.innerHTML = d.hero.indicadores.map(i => `<li>${ico(i.icon)} ${i.texto}</li>`).join("");
+
+  // SOBRE
+  const sobreEyebrow = document.getElementById("sobre-eyebrow");
+  if (sobreEyebrow) sobreEyebrow.textContent = d.sobre.eyebrow;
+  const sobreTitle = document.getElementById("sobre-title");
+  if (sobreTitle) sobreTitle.textContent = d.sobre.titulo;
+  const sobreParagraphs = document.getElementById("sobre-paragraphs");
+  if (sobreParagraphs) sobreParagraphs.innerHTML = d.sobre.paragrafos.map(p => `<p>${p}</p>`).join("");
+  const sobreStats = document.getElementById("sobre-stats");
+  if (sobreStats) sobreStats.innerHTML = d.sobre.stats.map(s => `<div><div class="stat-n">${s.numero}</div><div class="stat-l">${s.label}</div></div>`).join("");
+
   // TEMAS
+  const temasEyebrow = document.getElementById("temas-eyebrow");
+  if (temasEyebrow) temasEyebrow.textContent = d.temasEyebrow;
+  const temasTitulo = document.getElementById("temas-titulo");
+  if (temasTitulo) temasTitulo.textContent = d.temasTitulo;
+  const temasDesc = document.getElementById("temas-desc");
+  if (temasDesc) temasDesc.textContent = d.temasDescricao;
   const temasEl = document.getElementById("temas-grid");
-  if (temasEl) {
-    temasEl.innerHTML = temas.map((t, i) => `
-      <div class="reveal" style="transition-delay:${i*60}ms">
-        <div class="card">
-          <span class="ic">${ico(t.icon)}</span>
-          <h3>${t.t}</h3>
-          <p>${t.d}</p>
-        </div>
-      </div>`).join("");
-  }
+  if (temasEl) temasEl.innerHTML = d.temas.map((t,i) => `
+    <div class="reveal" style="transition-delay:${i*50}ms">
+      <div class="card">
+        <span class="cic">${ico(t.icon)}</span>
+        <h3>${t.t}</h3>
+        <p>${t.d}</p>
+      </div>
+    </div>`).join("");
 
   // BENEFÍCIOS
+  const benefEyebrow = document.getElementById("beneficios-eyebrow");
+  if (benefEyebrow) benefEyebrow.textContent = d.beneficiosEyebrow;
+  const benefTitulo = document.getElementById("beneficios-titulo");
+  if (benefTitulo) benefTitulo.textContent = d.beneficiosTitulo;
   const benefEl = document.getElementById("beneficios-grid");
-  if (benefEl) {
-    benefEl.innerHTML = beneficios.map((b, i) => `
-      <div class="reveal" style="transition-delay:${i*60}ms">
-        <div class="benefit">
-          <span class="ic">${ico(b.icon)}</span>
-          <div><h3>${b.t}</h3><p>${b.d}</p></div>
-        </div>
-      </div>`).join("");
-  }
+  if (benefEl) benefEl.innerHTML = d.beneficios.map((b,i) => `
+    <div class="reveal" style="transition-delay:${i*50}ms">
+      <div class="benefit">
+        <span class="bic">${ico(b.icon)}</span>
+        <div><h3>${b.t}</h3><p>${b.d}</p></div>
+      </div>
+    </div>`).join("");
 
   // PASSOS
-  const passosEl = document.getElementById("passos-timeline");
-  if (passosEl) {
-    passosEl.innerHTML = passos.map((p, i) => `
-      <div class="reveal" style="transition-delay:${i*100}ms">
-        <div class="step ${i % 2 === 1 ? "alt" : ""}">
-          <div class="text">
-            <span class="n">${p.n}</span>
-            <h3>${p.t}</h3>
-            <p>${p.d}</p>
-          </div>
-          <div class="dot"><span>${ico(p.icon)}</span></div>
+  const passosEyebrow = document.getElementById("passos-eyebrow");
+  if (passosEyebrow) passosEyebrow.textContent = d.passosEyebrow;
+  const passosTitulo = document.getElementById("passos-titulo");
+  if (passosTitulo) passosTitulo.textContent = d.passosTitulo;
+  const passosEl = document.getElementById("passos-steps");
+  if (passosEl) passosEl.innerHTML = d.passos.map((p,i) => `
+    <div class="reveal" style="transition-delay:${i*80}ms">
+      <div class="step-card">
+        <div class="step-num">${p.n}</div>
+        <div>
+          <div class="step-icon">${ico(p.icon)}</div>
+          <h3 style="margin-top:.75rem">${p.t}</h3>
+          <p>${p.d}</p>
         </div>
-      </div>`).join("");
-  }
+      </div>
+    </div>`).join("");
 
   // DEPOIMENTOS
+  const depEyebrow = document.getElementById("dep-eyebrow");
+  if (depEyebrow) depEyebrow.textContent = d.depoimentosEyebrow;
+  const depTitulo = document.getElementById("dep-titulo");
+  if (depTitulo) depTitulo.textContent = d.depoimentosTitulo;
   const depEl = document.getElementById("depoimentos-grid");
-  if (depEl) {
-    depEl.innerHTML = depoimentos.map((d, i) => `
-      <div class="reveal" style="transition-delay:${i*80}ms">
-        <figure class="testimonial">
-          <div class="stars">${stars5()}</div>
-          <blockquote>"${d.t}"</blockquote>
-          <figcaption>
-            <span class="avatar">${d.n[0]}</span>
-            <div><div class="who">${d.n}</div><div class="role">Paciente</div></div>
-          </figcaption>
-        </figure>
-      </div>`).join("");
-  }
+  if (depEl) depEl.innerHTML = d.depoimentos.map((dep,i) => `
+    <div class="reveal" style="transition-delay:${i*70}ms">
+      <figure class="testimonial">
+        <div class="stars">${stars5()}</div>
+        <blockquote>"${dep.t}"</blockquote>
+        <figcaption>
+          <span class="t-avatar">${dep.n[0]}</span>
+          <div><div class="t-who">${dep.n}</div><div class="t-role">Paciente</div></div>
+        </figcaption>
+      </figure>
+    </div>`).join("");
 
   // FAQ
+  const faqEyebrow = document.getElementById("faq-eyebrow");
+  if (faqEyebrow) faqEyebrow.textContent = d.faqEyebrow;
+  const faqTitulo = document.getElementById("faq-titulo");
+  if (faqTitulo) faqTitulo.textContent = d.faqTitulo;
   const faqEl = document.getElementById("faq-list");
   if (faqEl) {
-    faqEl.innerHTML = faqs.map((f, i) => `
-      <div class="reveal" style="transition-delay:${i*50}ms">
+    faqEl.innerHTML = d.faqs.map((f,i) => `
+      <div class="reveal" style="transition-delay:${i*40}ms">
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">
-            <span>${f.q}</span>${ico("chevron-down")}
+            <span>${f.q}</span>
+            <svg class="faq-chevron icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a"><p>${f.a}</p></div>
         </div>
       </div>`).join("");
 
-    // FAQ accordion
     faqEl.addEventListener("click", e => {
       const btn = e.target.closest(".faq-q");
       if (!btn) return;
@@ -373,189 +618,255 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Reveal on scroll
+  // FOOTER institucional
+  const footInst = document.getElementById("footer-institucional");
+  if (footInst) footInst.innerHTML = d.footer.institucional.map(t => `<li><a href="#">${t}</a></li>`).join("");
+
+  // FOOTER crédito
+  if (d.footer.desenvolvidoPor) {
+    const devLink = document.getElementById("footer-dev-link");
+    const devText = document.getElementById("footer-dev-text");
+    if (devLink) devLink.href = d.footer.desenvolvidoPor.url;
+    if (devText) devText.textContent = d.footer.desenvolvidoPor.texto;
+  }
+
+  // REVEAL
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+}
+
+/* ── INICIALIZAÇÃO ────────────────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadData();
+  render();
+
+  // HAMBURGUER
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuLinks = document.querySelectorAll(".mobile-menu a");
+
+  function closeMenu() {
+    hamburger.classList.remove("open");
+    mobileMenu.classList.remove("open");
+    document.body.style.overflow = "";
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  menuLinks.forEach(link => link.addEventListener("click", closeMenu));
 });
 </script>
 
-<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════════ -->
 <header class="nav">
   <div class="container nav-inner">
+
     <a href="#top" class="brand">
-      <span class="badge">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-9h7v7a9 9 0 0 1-9 9z"/><path d="M2 22l8-8"/></svg>
+      <span class="brand-badge">
+        <!-- data-img-logo: URL vem do config.json → imagens.logo -->
+        <img data-img-logo src="https://a.imagem.app/GeYjYX.png" alt="Logo Lucileide Costa" width="192" height="192" loading="eager">
       </span>
-      <span>
-        <span class="name">Lucileide Costa</span><br>
-        <span class="sub">Psicóloga · CRP 01/9096</span>
+      <span class="brand-text">
+        <span class="brand-name" data-brand-name>Lucileide Costa</span>
+        <span class="brand-sub" data-brand-sub-header>Psicóloga · CRP 01/9096</span>
       </span>
     </a>
-    <nav class="nav-links">
-      <a href="#sobre">Sobre</a>
-      <a href="#ajuda">Como ajudo</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#faq">FAQ</a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#ajuda">Como ajudo</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
     </nav>
-    <a class="nav-cta" href="#" data-wa>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
-      <span>WhatsApp</span>
-    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+
   </div>
 </header>
 
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navegação">
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#ajuda">Como ajudo</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#faq">Perguntas frequentes</a>
+  </nav>
+  <div class="menu-cta">
+    <a class="btn btn-wa" href="#" data-wa>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Falar pelo WhatsApp
+    </a>
+  </div>
+</div>
+
 <main id="top">
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════════ -->
 <section class="hero">
   <span class="blob blob-1"></span>
   <span class="blob blob-2"></span>
-  <div class="container hero-grid">
-    <div class="reveal">
-      <span class="tag">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM5 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg>
-        Psicoterapia Online · CRP 01/9096
+  <div class="container hero-inner">
+
+    <div class="hero-text reveal">
+      <span class="tag" id="hero-tag">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg>
+        <span id="hero-tag-text">Psicoterapia & Avaliação Psicológica · CRP 01/9096</span>
       </span>
-      <h1>Psicologia online para quem busca mais <em>equilíbrio emocional</em> e qualidade de vida.</h1>
-      <p class="lead">Mais de 20 anos ajudando pessoas a compreender emoções, fortalecer a autoestima e viver com mais leveza.</p>
+      <h1 id="hero-title">Psicologia para quem busca mais <em>equilíbrio emocional</em> e qualidade de vida.</h1>
+      <p class="hero-lead" id="hero-lead">Mais de 20 anos de experiência em psicoterapia, psicologia do trânsito e avaliação psicológica, com escuta ética, humanizada e baseada em evidências.</p>
       <div class="hero-ctas">
-        <a class="btn btn-wa" href="#" data-wa>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
-          Agendar pelo WhatsApp
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="#como-funciona">Conhecer o Atendimento</a>
+        <div class="btn-group">
+          <a class="btn btn-wa" href="#" data-wa>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#como-funciona">Conhecer o Atendimento</a>
+        </div>
       </div>
-      <ul class="indicators">
-        <li>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
-          Atendimento Online
-        </li>
-        <li>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          CRP 01/9096
-        </li>
-        <li>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8"/></svg>
-          +20 anos de experiência
-        </li>
-        <li>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-          Todo o Brasil
-        </li>
-      </ul>
+      <ul class="hero-indicators" id="hero-indicators"></ul>
     </div>
-    <div class="reveal" style="transition-delay:.15s">
+
+    <div class="reveal" style="transition-delay:.12s">
       <div class="hero-photo-wrap">
         <div class="hero-photo">
-          <img src="https://a.imagem.app/GezRcY.png" alt="Lucileide Costa, psicóloga clínica" width="1024" height="1024">
+          <!-- data-img-perfil: URL vem do config.json → imagens.fotoPerfil -->
+          <img data-img-perfil src="https://a.imagem.app/GezRcY.png" alt="Lucileide Costa, psicóloga clínica" width="900" height="900" loading="eager">
         </div>
         <div class="float-card left">
-          <span class="ic">
+          <span class="fic">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </span>
-          <div><div class="small">Acolhimento humanizado</div><div class="big">Escuta sem julgamento</div></div>
+          <div><div class="fsmall">Acolhimento humanizado</div><div class="fbig">Escuta sem julgamento</div></div>
         </div>
         <div class="float-card right">
-          <span class="ic">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <span class="fic" style="background:var(--accent);color:#5e4a2a">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18.2 5.5 22 7 14.5 2 9.5 9 9"/></svg>
           </span>
-          <div><div class="small">+20 anos</div><div class="big">de experiência clínica</div></div>
+          <div><div class="fsmall">+20 anos</div><div class="fbig">de experiência clínica</div></div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ═══════════════════════════ SOBRE ═══════════════════════════ -->
-<section id="sobre" class="sobre">
+<!-- ══════════════════════════════════════════════════════════════
+     SOBRE
+══════════════════════════════════════════════════════════════ -->
+<section id="sobre" class="section-pad">
   <div class="container sobre-grid">
     <div class="reveal">
-      <img class="sobre-img" src="https://a.imagem.app/GezZ4a.png" alt="Espaço acolhedor de atendimento online" loading="lazy" width="1200" height="1400">
+      <!-- data-img-sobre: URL vem do config.json → imagens.fotoSobre -->
+      <img class="sobre-img" data-img-sobre src="https://a.imagem.app/GezZ4a.png" alt="Espaço acolhedor de atendimento" loading="lazy" width="1200" height="1400">
     </div>
-    <div class="reveal" style="transition-delay:.12s">
-      <span class="eyebrow">Sobre a Psicóloga</span>
-      <h2 class="section-title">Um espaço seguro para você se reencontrar.</h2>
-      <p>Sou <strong>Lucileide Costa</strong>, psicóloga clínica com mais de duas décadas de experiência acompanhando pessoas em diferentes momentos da vida. Acredito que cada história é única, e meu trabalho é oferecer escuta atenta, acolhimento e ferramentas que ajudem você a se compreender melhor.</p>
-      <p>Atendo de forma 100% online, com uma abordagem humana, respeitosa e baseada em evidências. Aqui, você encontra um espaço livre de julgamentos para falar sobre o que sente — e construir, no seu tempo, uma vida com mais equilíbrio, leveza e propósito.</p>
-      <div class="stats">
-        <div><div class="stat-n">20+</div><div class="stat-l">Anos de experiência</div></div>
-        <div><div class="stat-n">100%</div><div class="stat-l">Atendimento online</div></div>
-        <div><div class="stat-n">BR</div><div class="stat-l">Todo o Brasil</div></div>
-      </div>
+    <div class="sobre-text reveal" style="transition-delay:.1s">
+      <span class="eyebrow" id="sobre-eyebrow">Sobre a Psicóloga</span>
+      <h2 class="sobre-title" id="sobre-title">Um espaço seguro para você se reencontrar.</h2>
+      <div id="sobre-paragraphs"></div>
+      <div class="stats" id="sobre-stats"></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ TEMAS ═══════════════════════════ -->
-<section id="ajuda" class="bg-soft">
+<!-- ══════════════════════════════════════════════════════════════
+     TEMAS
+══════════════════════════════════════════════════════════════ -->
+<section id="ajuda" class="section-pad bg-soft">
   <div class="container">
-    <div class="reveal center">
-      <span class="eyebrow">Como a terapia pode ajudar</span>
-      <h2>Temas que cuidamos juntos</h2>
-      <p>Um trabalho terapêutico voltado a adultos que desejam viver com mais consciência e leveza.</p>
+    <div class="reveal center sec-head">
+      <span class="eyebrow" id="temas-eyebrow">Como posso ajudar</span>
+      <h2 id="temas-titulo">Áreas de atuação</h2>
+      <p class="center-wrap" id="temas-desc" style="margin:0 auto;color:var(--muted)">Psicoterapia e avaliação psicológica conduzidas com ética, técnica e acolhimento.</p>
     </div>
     <div class="grid-4" id="temas-grid"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ BENEFÍCIOS ═══════════════════════════ -->
-<section>
+<!-- ══════════════════════════════════════════════════════════════
+     BENEFÍCIOS
+══════════════════════════════════════════════════════════════ -->
+<section class="section-pad">
   <div class="container">
-    <div class="reveal center">
-      <span class="eyebrow">Terapia Online</span>
-      <h2>Os benefícios do atendimento à distância</h2>
+    <div class="reveal center sec-head">
+      <span class="eyebrow" id="beneficios-eyebrow">Terapia Online</span>
+      <h2 id="beneficios-titulo">Os benefícios do atendimento à distância</h2>
     </div>
     <div class="grid-3" id="beneficios-grid"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ COMO FUNCIONA ═══════════════════════════ -->
-<section id="como-funciona" class="bg-soft">
+<!-- ══════════════════════════════════════════════════════════════
+     COMO FUNCIONA
+══════════════════════════════════════════════════════════════ -->
+<section id="como-funciona" class="section-pad bg-soft">
   <div class="container">
-    <div class="reveal center">
-      <span class="eyebrow">Como Funciona</span>
-      <h2>Três passos simples para começar</h2>
+    <div class="reveal center sec-head">
+      <span class="eyebrow" id="passos-eyebrow">Como Funciona</span>
+      <h2 id="passos-titulo">Três passos simples para começar</h2>
     </div>
-    <div class="timeline" id="passos-timeline"></div>
-    <div class="cta-center">
-      <a class="btn btn-wa" href="#" data-wa>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
-        Quero agendar minha primeira sessão
-      </a>
+    <div class="steps" id="passos-steps"></div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <div class="btn-group" style="justify-content:center">
+        <a class="btn btn-wa" href="#" data-wa>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Quero agendar minha primeira sessão
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ DEPOIMENTOS ═══════════════════════════ -->
-<section>
+<!-- ══════════════════════════════════════════════════════════════
+     DEPOIMENTOS
+══════════════════════════════════════════════════════════════ -->
+<section class="section-pad">
   <div class="container">
-    <div class="reveal center">
-      <span class="eyebrow">Depoimentos</span>
-      <h2>Histórias de quem encontrou cuidado aqui</h2>
+    <div class="reveal center sec-head">
+      <span class="eyebrow" id="dep-eyebrow">Depoimentos</span>
+      <h2 id="dep-titulo">Histórias de quem encontrou cuidado aqui</h2>
     </div>
     <div class="testimonials" id="depoimentos-grid"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
-<section id="faq" class="bg-soft">
-  <div class="container faq-wrap">
-    <div class="reveal center">
-      <span class="eyebrow">Perguntas Frequentes</span>
-      <h2>Tire suas dúvidas</h2>
+<!-- ══════════════════════════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════════════════════════ -->
+<section id="faq" class="section-pad bg-soft">
+  <div class="container">
+    <div class="reveal center sec-head">
+      <span class="eyebrow" id="faq-eyebrow">Perguntas Frequentes</span>
+      <h2 id="faq-titulo">Tire suas dúvidas</h2>
     </div>
-    <div class="faq-list" id="faq-list"></div>
+    <div style="max-width:48rem;margin:0 auto">
+      <div class="faq-list" id="faq-list"></div>
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ CTA FINAL ═══════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════════════════════════════ -->
 <section class="cta-final">
-  <div class="cta-final-bg"></div>
   <div class="container reveal">
     <span class="tag">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -563,29 +874,33 @@ document.addEventListener("DOMContentLoaded", () => {
     </span>
     <h2>Você não precisa enfrentar tudo sozinho(a).</h2>
     <p>A terapia pode ser o primeiro passo para compreender suas emoções e construir uma vida com mais equilíbrio e bem-estar.</p>
-    <a class="btn-final" href="#" data-wa>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
-      Falar com a psicóloga no WhatsApp
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
+    <div class="btn-area">
+      <a class="btn-final" href="#" data-wa>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar com a psicóloga no WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════ -->
 <footer class="foot">
   <div class="container foot-grid">
     <div>
-      <div class="brand">
-        <span class="badge">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-9h7v7a9 9 0 0 1-9 9z"/><path d="M2 22l8-8"/></svg>
+      <div class="brand" style="margin-bottom:.75rem">
+        <span class="brand-badge">
+          <!-- data-img-logo: URL vem do config.json → imagens.logo -->
+          <img data-img-logo src="https://a.imagem.app/GeYjYX.png" alt="Logo Lucileide Costa" width="192" height="192" loading="lazy">
         </span>
-        <span class="name">Lucileide Costa</span>
+        <span class="brand-name" data-brand-name>Lucileide Costa</span>
       </div>
-      <p style="margin-top:.75rem;color:var(--muted);font-size:.875rem;line-height:1.6">
-        Psicóloga Clínica · CRP 01/9096<br>
-        Atendimento 100% Online · Todo o Brasil
+      <p style="color:var(--muted);font-size:.875rem;line-height:1.65">
+        <span data-brand-sub-footer>Psicóloga Clínica · CRP 01/9096</span><br>
+        Atendimento Online · Todo o Brasil
       </p>
     </div>
     <div>
@@ -593,7 +908,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul>
         <li>
           <a href="#" data-wa>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
             WhatsApp
           </a>
         </li>
@@ -607,20 +922,23 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     <div>
       <div class="foot-h">Institucional</div>
-      <ul>
+      <ul id="footer-institucional">
         <li><a href="#">Política de Privacidade</a></li>
         <li><a href="#">Termos de Uso</a></li>
       </ul>
     </div>
   </div>
   <div class="container">
-    <div class="foot-bottom">© <span data-year></span> Lucileide Costa · Psicóloga Clínica · CRP 01/9096. Todos os direitos reservados.</div>
+    <div class="foot-bottom">
+      © <span data-year></span> <span data-brand-name>Lucileide Costa</span> · Psicóloga Clínica · CRP 01/9096. Todos os direitos reservados.<br>
+      <a class="foot-credit" id="footer-dev-link" href="https://wa.me/5561999118365" target="_blank" rel="noopener"><span id="footer-dev-text">Desenvolvido por GTI Soluções em Informática</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
   </div>
 </footer>
 
-<!-- ═══════════════════════════ FAB WHATSAPP ═══════════════════════════ -->
+<!-- FAB WhatsApp -->
 <a class="fab" href="#" data-wa aria-label="Falar no WhatsApp">
-  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
 </body>
