@@ -36,7 +36,7 @@ O site apresenta informações profissionais, serviços oferecidos, atendimento 
 
 ## 🌐 Hospedagem
 
-O projeto utiliza hospedagem web para disponibilização do site e serviços externos para algumas integrações.
+O projeto utiliza **GitHub Pages** para hospedagem, com domínio personalizado.
 
 ## 👨‍💻 Desenvolvedor
 
