@@ -1,4 +1,4 @@
-# 🧠 Lucileide Costa — Psicóloga
+# 🧠 Lucileide Costa Psicóloga
 
 Site institucional desenvolvido para apresentar os serviços, áreas de atuação e formas de atendimento da psicóloga Lucileide Costa.
 
