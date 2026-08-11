@@ -30,6 +30,10 @@ O site apresenta informações profissionais, serviços oferecidos, atendimento 
 * 📍 Localização via Google Maps
 * 📱 Layout responsivo
 
+## 🌐 Ver o site
+
+🔗 **[Acessar o site](https://psilucileidecosta.com.br/)**
+
 ## 🌐 Hospedagem
 
 O projeto utiliza hospedagem web para disponibilização do site e serviços externos para algumas integrações.
