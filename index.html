@@ -335,6 +335,7 @@ const DEFAULT_DATA = {
   contato: {
     whatsappNumero: "5500000000000",
     whatsappMensagem: "Olá Lucileide, gostaria de agendar uma sessão de psicoterapia online.",
+    origemTexto: "🌐 Vim através do site.",
     instagramUrl: "https://instagram.com/"
   },
   imagens: {
@@ -602,7 +603,11 @@ function initFabBubble() {
 /* ── RENDER ───────────────────────────────────────────────────── */
 function render() {
   const d = DATA;
-  const WHATSAPP_URL = `https://wa.me/${d.contato.whatsappNumero}?text=${encodeURIComponent(d.contato.whatsappMensagem)}`;
+  const origemTexto = d.contato.origemTexto || "";
+  const mensagemComOrigem = origemTexto
+    ? `${d.contato.whatsappMensagem}\n\n${origemTexto}`
+    : d.contato.whatsappMensagem;
+  const WHATSAPP_URL = `https://wa.me/${d.contato.whatsappNumero}?text=${encodeURIComponent(mensagemComOrigem)}`;
   const INSTAGRAM_URL = d.contato.instagramUrl;
   const LOGO_URL = d.imagens.logo;
 
