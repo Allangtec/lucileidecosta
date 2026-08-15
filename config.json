@@ -93,6 +93,14 @@
     { "q": "Você atende medo de dirigir e avaliação para neurodivergentes?",   "a": "Sim. Sou especialista em Psicologia do Trânsito, com experiência em psicoterapia para medo de dirigir, e também realizo avaliação psicológica de forma acolhedora e respeitosa para pessoas neurodivergentes." },
     { "q": "Qual é a abordagem teórica utilizada nas sessões?",                "a": "Minha abordagem é comportamental, com ênfase na Terapia Cognitivo-Comportamental (TCC), o que permite um trabalho estruturado, prático e baseado em evidências científicas, adaptado às necessidades de cada paciente." }
   ],
+  "fab": {
+    "mensagens": [
+      "Olá! Vamos agendar sua sessão? 💬",
+      "Atendo Online (todo o Brasil) ou Presencial em Brasília.",
+      "Tire suas dúvidas agora mesmo pelo WhatsApp.",
+      "Primeira consulta? Posso te explicar como funciona."
+    ]
+  },
   "footer": {
     "institucional": ["Política de Privacidade", "Termos de Uso"],
     "desenvolvidoPor": {
