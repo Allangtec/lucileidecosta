@@ -281,13 +281,27 @@ img{display:block;max-width:100%}
 .foot-credit:hover{color:var(--primary)}
 .foot-credit .icon{width:.8em;height:.8em}
 
-/* ── FAB WHATSAPP ─────────────────────────────────────────────── */
-.fab{position:fixed;bottom:1.25rem;right:1.25rem;z-index:50;width:3.25rem;height:3.25rem;display:grid;place-items:center;border-radius:9999px;background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);font-size:1.35rem;transition:transform .2s;animation:fabbreathe 2.6s ease-in-out infinite}
+/* ── FAB WHATSAPP + BALÃO ─────────────────────────────────────── */
+.fab-wrap{position:fixed;bottom:1.25rem;right:1.25rem;z-index:50;display:flex;align-items:center;gap:.6rem;max-width:calc(100vw - 1.5rem)}
+@media(min-width:768px){.fab-wrap{bottom:1.75rem;right:1.75rem}}
+
+.fab-bubble{position:relative;background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:1rem 1rem .25rem 1rem;padding:.75rem 2rem .75rem 1rem;box-shadow:var(--shadow-elegant);font-size:.8125rem;font-weight:500;line-height:1.4;max-width:min(15.5rem,58vw);opacity:0;transform:translateY(6px) scale(.96);pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.fab-bubble.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.fab-bubble-close{position:absolute;top:.4rem;right:.45rem;width:1.1rem;height:1.1rem;border-radius:9999px;background:var(--secondary);color:var(--muted);display:grid;place-items:center;font-size:.55rem;line-height:1;cursor:pointer;border:0;padding:0}
+.fab-bubble-close:hover{background:var(--accent);color:var(--fg)}
+.fab-bubble-text{cursor:pointer;display:block}
+
+.fab{position:relative;flex-shrink:0;width:3.25rem;height:3.25rem;display:grid;place-items:center;border-radius:9999px;background:var(--wa);color:var(--wa-fg);box-shadow:var(--shadow-elegant);font-size:1.35rem;transition:transform .2s;animation:fabbreathe 2.6s ease-in-out infinite}
 @keyframes fabbreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-@media(min-width:768px){.fab{bottom:1.75rem;right:1.75rem;width:3.5rem;height:3.5rem}}
+@media(min-width:768px){.fab{width:3.5rem;height:3.5rem}}
 .fab:hover{transform:scale(1.1)}
 .fab::before{content:"";position:absolute;inset:0;border-radius:9999px;animation:pulse 2.2s cubic-bezier(.4,0,.6,1) infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,163,106,.5)}70%{box-shadow:0 0 0 16px rgba(37,163,106,0)}100%{box-shadow:0 0 0 0 rgba(37,163,106,0)}}
+
+@media(max-width:340px){
+  .fab-bubble{max-width:min(13rem,55vw);font-size:.75rem;padding:.65rem 1.75rem .65rem .85rem}
+  .fab{width:3rem;height:3rem}
+}
 
 /* ── REVEAL ───────────────────────────────────────────────────── */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
@@ -424,6 +438,14 @@ const DEFAULT_DATA = {
       "https://a.imagem.app/G1pJkJ.png"
     ]
   },
+  fab: {
+    mensagens: [
+      "Olá! Vamos agendar sua sessão? 💬",
+      "Atendo Online (todo o Brasil) ou Presencial em Brasília.",
+      "Tire suas dúvidas agora mesmo pelo WhatsApp.",
+      "Primeira consulta? Posso te explicar como funciona."
+    ]
+  },
   footer: {
     institucional: ["Política de Privacidade", "Termos de Uso"],
     desenvolvidoPor: { texto: "Desenvolvido por GTI Soluções em Informática", url: "https://wa.me/5561999118365" }
@@ -518,6 +540,63 @@ function carrosselIrPara(i) {
 function carrosselAutoplay() {
   clearInterval(carrosselAutoTimer);
   carrosselAutoTimer = setInterval(() => carrosselIrPara(carrosselIndex + 1), 5000);
+}
+
+/* ── BALÃO DO WHATSAPP (FAB) ──────────────────────────────────── */
+function initFabBubble() {
+  const bubble = document.getElementById("fab-bubble");
+  const bubbleText = document.getElementById("fab-bubble-text");
+  const closeBtn = document.getElementById("fab-bubble-close");
+  const fabBtn = document.querySelector(".fab");
+  if (!bubble || !bubbleText || !fabBtn) return;
+
+  const mensagens = (DATA.fab && Array.isArray(DATA.fab.mensagens) && DATA.fab.mensagens.length)
+    ? DATA.fab.mensagens
+    : ["Olá! Vamos agendar sua sessão?"];
+
+  let idx = 0;
+  let dismissed = false;
+  let showTimer = null;
+  let hideTimer = null;
+
+  function showBubble() {
+    if (dismissed) return;
+    bubbleText.textContent = mensagens[idx % mensagens.length];
+    idx++;
+    bubble.classList.add("show");
+    bubble.setAttribute("aria-hidden", "false");
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      bubble.classList.remove("show");
+      bubble.setAttribute("aria-hidden", "true");
+    }, 6000);
+  }
+
+  function scheduleLoop() {
+    clearTimeout(showTimer);
+    showTimer = setTimeout(() => {
+      showBubble();
+      scheduleLoop();
+    }, 15000);
+  }
+
+  // primeira aparição após um pequeno atraso, depois entra no ciclo
+  showTimer = setTimeout(() => {
+    showBubble();
+    scheduleLoop();
+  }, 2200);
+
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dismissed = true;
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    bubble.classList.remove("show");
+    bubble.setAttribute("aria-hidden", "true");
+  });
+
+  bubbleText.addEventListener("click", () => fabBtn.click());
 }
 
 /* ── RENDER ───────────────────────────────────────────────────── */
@@ -748,6 +827,7 @@ function render() {
 document.addEventListener("DOMContentLoaded", async () => {
   await loadData();
   render();
+  initFabBubble();
 
   // HAMBURGUER
   const hamburger = document.getElementById("hamburger");
@@ -1104,10 +1184,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   </div>
 </footer>
 
-<!-- FAB WhatsApp -->
-<a class="fab" href="#" data-wa aria-label="Falar no WhatsApp">
-  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
+<!-- FAB WhatsApp + Balão de mensagem -->
+<div class="fab-wrap">
+  <div class="fab-bubble" id="fab-bubble" role="status" aria-hidden="true">
+    <button class="fab-bubble-close" id="fab-bubble-close" type="button" aria-label="Fechar mensagem">✕</button>
+    <span class="fab-bubble-text" id="fab-bubble-text"></span>
+  </div>
+  <a class="fab" href="#" data-wa aria-label="Falar no WhatsApp">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+</div>
 
 </body>
 </html>
