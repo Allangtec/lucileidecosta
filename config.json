@@ -19,7 +19,8 @@
     "nomeCompleto": "Lucileide Maria Cardoso Costa",
     "crp": "CRP 01/9096",
     "subtituloHeader": "Psicóloga · CRP 01/9096",
-    "subtituloFooter": "Psicóloga Clínica · CRP 01/9096"
+    "subtituloFooter": "Psicóloga Clínica · CRP 01/9096",
+    "crpVerificacaoUrl": "https://e-psi.cfp.org.br/"
   },
   "hero": {
     "tag": "Psicoterapia & Avaliação Psicológica · CRP 01/9096",
@@ -101,6 +102,18 @@
       "Tire suas dúvidas agora mesmo pelo WhatsApp.",
       "Primeira consulta? Posso te explicar como funciona."
     ]
+  },
+  "oferta": {
+    "ativo": true,
+    "badge": "Primeira Consulta",
+    "titulo": "Comece sua terapia com um valor social especial",
+    "descricao": "Sei que dar o primeiro passo já não é fácil — por isso ofereço a primeira sessão com um valor acessível, para que você conheça meu trabalho sem pressão.",
+    "precoDe": "",
+    "precoPor": "Valor social",
+    "precoNota": "primeira sessão · valor exato no WhatsApp",
+    "textoBotao": "Garantir minha vaga",
+    "rodape": "Vagas limitadas por mês · Online ou presencial",
+    "whatsappMensagem": "Olá Lucileide! Vi no site que a primeira consulta tem valor social e gostaria de agendar."
   },
   "footer": {
     "institucional": ["Política de Privacidade", "Termos de Uso"],
