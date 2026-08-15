@@ -9,10 +9,45 @@
 <meta property="og:title" content="Lucileide Costa | Psicóloga Clínica & Avaliação Psicológica" />
 <meta property="og:description" content="Psicoterapia online e avaliação psicológica com atendimento humanizado. CRP 01/9096." />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:image" id="og-image-link" content="https://a.imagem.app/GeYjYX.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" id="twitter-image-link" content="https://a.imagem.app/GeYjYX.png" />
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+
+<!-- ═══════════════════════════════════════════════════════════════
+     RASTREAMENTO DE CONVERSÃO (Google Ads / Meta Ads)
+     Substitua os IDs abaixo pelos seus antes de subir pro ar.
+     Sem isso, as campanhas de tráfego pago não conseguem medir
+     quantos cliques no WhatsApp viraram lead — nem otimizar sozinhas.
+═══════════════════════════════════════════════════════════════ -->
+<!-- Google tag (gtag.js) - troque G-XXXXXXXXXX pelo ID do Google Ads/Analytics -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<!-- Meta Pixel (Facebook/Instagram Ads) - troque SEU_PIXEL_ID -->
+<!--
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'SEU_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+-->
+
 <!-- Logo dinâmica: será substituída pelo JS após carregar config.json -->
 <link rel="icon" type="image/png" sizes="192x192" id="favicon-link" href="https://a.imagem.app/GeYjYX.png">
 <link rel="apple-touch-icon" id="apple-touch-icon-link" href="https://a.imagem.app/GeYjYX.png">
@@ -161,6 +196,37 @@ img{display:block;max-width:100%}
 
 /* ── BG ALTERNADO ─────────────────────────────────────────────── */
 .bg-soft{background:rgba(239,234,221,.45)}
+
+/* ── OFERTA / PRIMEIRA CONSULTA VALOR SOCIAL ─────────────────── */
+.oferta-section{padding:2.5rem 0}
+@media(min-width:768px){.oferta-section{padding:3rem 0}}
+.oferta-card{position:relative;overflow:hidden;border-radius:1.75rem;background:var(--grad-cta);color:#fff;padding:2rem 1.5rem;box-shadow:var(--shadow-elegant);display:flex;flex-direction:column;gap:1.5rem;text-align:center}
+@media(min-width:768px){.oferta-card{padding:2.75rem 3rem;flex-direction:row;align-items:center;justify-content:space-between;text-align:left;gap:2.5rem}}
+.oferta-card::before{content:"";position:absolute;top:-40%;right:-15%;width:22rem;height:22rem;border-radius:9999px;background:rgba(255,255,255,.06);pointer-events:none}
+.oferta-card::after{content:"";position:absolute;bottom:-50%;left:-10%;width:18rem;height:18rem;border-radius:9999px;background:rgba(255,255,255,.05);pointer-events:none}
+.oferta-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:.35rem .9rem;border-radius:9999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;width:fit-content}
+@media(min-width:768px){.oferta-badge{margin:0}}
+.oferta-main{position:relative;z-index:1;flex:1}
+.oferta-titulo{font-size:clamp(1.4rem,3.2vw,1.85rem);margin-top:.75rem;color:#fff}
+.oferta-desc{margin-top:.6rem;color:rgba(255,255,255,.85);font-size:.9375rem;line-height:1.65;max-width:32rem}
+@media(min-width:768px){.oferta-desc{margin-left:0;margin-right:0}}
+.oferta-preco-wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.9rem;flex-shrink:0}
+@media(min-width:768px){.oferta-preco-wrap{align-items:flex-end}}
+.oferta-preco{display:flex;flex-direction:column;align-items:center}
+@media(min-width:768px){.oferta-preco{align-items:flex-end}}
+.oferta-preco-de{font-size:.75rem;color:rgba(255,255,255,.65);text-decoration:line-through}
+.oferta-preco-por{font-family:var(--font-display);font-size:2.5rem;font-weight:600;line-height:1;color:#fff}
+.oferta-preco-nota{font-size:.7rem;color:rgba(255,255,255,.7);margin-top:.15rem}
+.oferta-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:#fff;color:var(--primary);padding:.85rem 1.75rem;font-size:.9375rem;font-weight:600;border-radius:9999px;border:0;cursor:pointer;box-shadow:0 12px 30px -10px rgba(0,0,0,.35);transition:transform .2s;white-space:nowrap}
+.oferta-btn:hover{transform:translateY(-2px)}
+.oferta-rodape{position:relative;z-index:1;font-size:.75rem;color:rgba(255,255,255,.65);margin-top:.5rem}
+
+/* ── FAIXA DE CONFIANÇA ───────────────────────────────────────── */
+.trust-strip{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:center;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--muted)}
+.trust-item .icon{color:var(--primary)}
+.trust-item a{color:var(--primary);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.trust-item a:hover{color:var(--fg)}
 
 /* ── SECTION HEADER ───────────────────────────────────────────── */
 .sec-head{margin-bottom:2.5rem}
@@ -348,7 +414,8 @@ const DEFAULT_DATA = {
     nomeCompleto: "Lucileide Maria Cardoso Costa",
     crp: "CRP 01/9096",
     subtituloHeader: "Psicóloga · CRP 01/9096",
-    subtituloFooter: "Psicóloga Clínica · CRP 01/9096"
+    subtituloFooter: "Psicóloga Clínica · CRP 01/9096",
+    crpVerificacaoUrl: "https://e-psi.cfp.org.br/"
   },
   hero: {
     tag: "Psicoterapia & Avaliação Psicológica · CRP 01/9096",
@@ -447,6 +514,18 @@ const DEFAULT_DATA = {
       "Primeira consulta? Posso te explicar como funciona."
     ]
   },
+  oferta: {
+    ativo: true,
+    badge: "Primeira Consulta",
+    titulo: "Comece sua terapia com um valor social especial",
+    descricao: "Sei que dar o primeiro passo já não é fácil — por isso ofereço a primeira sessão com um valor acessível, para que você conheça meu trabalho sem pressão.",
+    precoDe: "",
+    precoPor: "Valor social",
+    precoNota: "primeira sessão · consulte no WhatsApp",
+    textoBotao: "Garantir minha vaga",
+    rodape: "Vagas limitadas por mês · Online ou presencial",
+    whatsappMensagem: "Olá Lucileide! Vi no site que a primeira consulta tem valor social e gostaria de agendar."
+  },
   footer: {
     institucional: ["Política de Privacidade", "Termos de Uso"],
     desenvolvidoPor: { texto: "Desenvolvido por GTI Soluções em Informática", url: "https://wa.me/5561999118365" }
@@ -454,6 +533,21 @@ const DEFAULT_DATA = {
 };
 
 let DATA = DEFAULT_DATA;
+
+/* ── TRACKING DE CONVERSÃO ────────────────────────────────────────
+   Dispara automaticamente para o Google Ads/Analytics (gtag) e para
+   o Meta Pixel (fbq) se estiverem instalados no <head>. Não faz nada
+   e não gera erro se eles ainda não tiverem sido configurados. ── */
+function trackConversion(label) {
+  try {
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", { event_category: "whatsapp", event_label: label });
+    }
+    if (typeof fbq === "function") {
+      fbq("track", "Lead", { content_name: label });
+    }
+  } catch (e) { /* silencioso */ }
+}
 
 async function loadData() {
   try {
@@ -608,6 +702,9 @@ function render() {
     ? `${d.contato.whatsappMensagem}\n\n${origemTexto}`
     : d.contato.whatsappMensagem;
   const WHATSAPP_URL = `https://wa.me/${d.contato.whatsappNumero}?text=${encodeURIComponent(mensagemComOrigem)}`;
+  const ofertaMsg = (d.oferta && d.oferta.whatsappMensagem) ? d.oferta.whatsappMensagem : d.contato.whatsappMensagem;
+  const ofertaMsgComOrigem = origemTexto ? `${ofertaMsg}\n\n${origemTexto}` : ofertaMsg;
+  const OFERTA_WHATSAPP_URL = `https://wa.me/${d.contato.whatsappNumero}?text=${encodeURIComponent(ofertaMsgComOrigem)}`;
   const INSTAGRAM_URL = d.contato.instagramUrl;
   const LOGO_URL = d.imagens.logo;
 
@@ -619,6 +716,41 @@ function render() {
   if (ogTitle) ogTitle.setAttribute("content", d.seo.title);
   const ogDesc = document.querySelector('meta[property="og:description"]');
   if (ogDesc) ogDesc.setAttribute("content", d.seo.description);
+  const ogImg = document.getElementById("og-image-link");
+  if (ogImg) ogImg.setAttribute("content", d.imagens.fotoPerfil || d.imagens.logo);
+  const twImg = document.getElementById("twitter-image-link");
+  if (twImg) twImg.setAttribute("content", d.imagens.fotoPerfil || d.imagens.logo);
+
+  // SCHEMA.ORG — ajuda o Google a entender que é uma clínica local
+  try {
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": d.marca.nomeCompleto,
+      "image": d.imagens.fotoPerfil,
+      "description": d.seo.description,
+      "url": window.location.href,
+      "telephone": "+" + d.contato.whatsappNumero,
+      "priceRange": "$$",
+      "address": d.espacoPresencial ? {
+        "@type": "PostalAddress",
+        "streetAddress": d.espacoPresencial.endereco.linha1,
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "addressCountry": "BR"
+      } : undefined,
+      "areaServed": "BR",
+      "medicalSpecialty": "Psicoterapia"
+    };
+    let ldScript = document.getElementById("ld-json");
+    if (!ldScript) {
+      ldScript = document.createElement("script");
+      ldScript.type = "application/ld+json";
+      ldScript.id = "ld-json";
+      document.head.appendChild(ldScript);
+    }
+    ldScript.textContent = JSON.stringify(ld);
+  } catch (e) { console.warn("Não foi possível gerar dados estruturados.", e); }
 
   // Logo dinâmica (favicon + apple-touch-icon)
   const faviconEl = document.getElementById("favicon-link");
@@ -627,7 +759,20 @@ function render() {
   if (appleIconEl) appleIconEl.href = LOGO_URL;
 
   // Links WA e IG
-  document.querySelectorAll("[data-wa]").forEach(el => el.href = WHATSAPP_URL);
+  document.querySelectorAll("[data-wa]").forEach(el => {
+    el.href = WHATSAPP_URL;
+    if (!el.dataset.trackBound) {
+      el.dataset.trackBound = "1";
+      el.addEventListener("click", () => trackConversion("whatsapp_padrao"));
+    }
+  });
+  document.querySelectorAll("[data-wa-oferta]").forEach(el => {
+    el.href = OFERTA_WHATSAPP_URL;
+    if (!el.dataset.trackBound) {
+      el.dataset.trackBound = "1";
+      el.addEventListener("click", () => trackConversion("whatsapp_oferta_valor_social"));
+    }
+  });
   document.querySelectorAll("[data-ig]").forEach(el => el.href = INSTAGRAM_URL);
   document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
 
@@ -670,6 +815,35 @@ function render() {
   if (sobreParagraphs) sobreParagraphs.innerHTML = d.sobre.paragrafos.map(p => `<p>${p}</p>`).join("");
   const sobreStats = document.getElementById("sobre-stats");
   if (sobreStats) sobreStats.innerHTML = d.sobre.stats.map(s => `<div><div class="stat-n">${s.numero}</div><div class="stat-l">${s.label}</div></div>`).join("");
+
+  // FAIXA DE CONFIANÇA (verificação CRP)
+  const sobreTrust = document.getElementById("sobre-trust");
+  if (sobreTrust) {
+    sobreTrust.innerHTML = `
+      <span class="trust-item">${ico("shield-check")} Registro ${d.marca.crp} — <a href="${d.marca.crpVerificacaoUrl}" target="_blank" rel="noopener">verificar no e-psi/CFP</a></span>
+      <span class="trust-item">${ico("lock")} Sigilo garantido pelo Código de Ética</span>
+    `;
+  }
+
+  // OFERTA — PRIMEIRA CONSULTA COM VALOR SOCIAL
+  const of = d.oferta;
+  const ofertaSection = document.getElementById("oferta-section");
+  if (ofertaSection && of && of.ativo) {
+    ofertaSection.style.display = "";
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set("oferta-badge-text", of.badge);
+    set("oferta-titulo", of.titulo);
+    set("oferta-desc", of.descricao);
+    set("oferta-preco-de", of.precoDe || "");
+    set("oferta-preco-por", of.precoPor);
+    set("oferta-preco-nota", of.precoNota);
+    set("oferta-btn-text", of.textoBotao);
+    set("oferta-rodape", of.rodape);
+    const precoDeEl = document.getElementById("oferta-preco-de");
+    if (precoDeEl) precoDeEl.style.display = of.precoDe ? "" : "none";
+  } else if (ofertaSection) {
+    ofertaSection.style.display = "none";
+  }
 
   // TEMAS
   const temasEyebrow = document.getElementById("temas-eyebrow");
@@ -962,6 +1136,36 @@ document.addEventListener("DOMContentLoaded", async () => {
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
+     PRIMEIRA CONSULTA — VALOR SOCIAL
+══════════════════════════════════════════════════════════════ -->
+<section class="oferta-section" id="oferta-section" style="display:none">
+  <div class="container reveal">
+    <div class="oferta-card">
+      <div class="oferta-main">
+        <span class="oferta-badge">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg>
+          <span id="oferta-badge-text">Primeira Consulta</span>
+        </span>
+        <h2 class="oferta-titulo" id="oferta-titulo">Comece sua terapia com um valor social especial</h2>
+        <p class="oferta-desc" id="oferta-desc">Sei que dar o primeiro passo já não é fácil — por isso ofereço a primeira sessão com um valor acessível, para que você conheça meu trabalho sem pressão.</p>
+      </div>
+      <div class="oferta-preco-wrap">
+        <div class="oferta-preco">
+          <span class="oferta-preco-de" id="oferta-preco-de"></span>
+          <span class="oferta-preco-por" id="oferta-preco-por"></span>
+          <span class="oferta-preco-nota" id="oferta-preco-nota">valor social — primeira sessão</span>
+        </div>
+        <a class="oferta-btn" href="#" data-wa-oferta>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.269a.75.75 0 0 0 .921.921l5.444-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.524-5.204-1.433l-.374-.222-3.878 1.045 1.046-3.878-.222-.374A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span id="oferta-btn-text">Garantir minha vaga</span>
+        </a>
+        <span class="oferta-rodape" id="oferta-rodape">Vagas limitadas por mês · Online ou presencial</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
      SOBRE
 ══════════════════════════════════════════════════════════════ -->
 <section id="sobre" class="section-pad">
@@ -975,6 +1179,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <h2 class="sobre-title" id="sobre-title">Um espaço seguro para você se reencontrar.</h2>
       <div id="sobre-paragraphs"></div>
       <div class="stats" id="sobre-stats"></div>
+      <div class="trust-strip" id="sobre-trust"></div>
     </div>
   </div>
 </section>
