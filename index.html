@@ -24,53 +24,165 @@
                script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net;
                connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net;
                img-src 'self' data: https:;">
-<!-- ═══════════════════════════════════════════════════════════════
-     RASTREAMENTO DE CONVERSÃO (Google Ads) — ATIVO
+<!-- ============================================================
+     POLÍTICA DE SEGURANÇA DE CONTEÚDO
+     
+     Mantém o funcionamento normal do site e libera os domínios
+     necessários para Google Ads / Google Analytics / Tag Assistant.
+============================================================ -->
+
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self' https: data: blob:;
+               script-src 'self' 'unsafe-inline' 'unsafe-eval'
+               https://www.googletagmanager.com
+               https://googletagmanager.com
+               https://www.google-analytics.com
+               https://*.googletagmanager.com
+               https://www.googleadservices.com
+               https://googleads.g.doubleclick.net
+               https://www.google.com;
+               script-src-elem 'self' 'unsafe-inline'
+               https://www.googletagmanager.com
+               https://googletagmanager.com
+               https://www.google-analytics.com
+               https://*.googletagmanager.com
+               https://www.googleadservices.com
+               https://googleads.g.doubleclick.net
+               https://www.google.com;
+               connect-src 'self' https:
+               https://www.googletagmanager.com
+               https://googletagmanager.com
+               https://www.google-analytics.com
+               https://*.google-analytics.com
+               https://*.analytics.google.com
+               https://*.googletagmanager.com
+               https://www.googleadservices.com
+               https://googleads.g.doubleclick.net
+               https://www.google.com;
+               img-src 'self' data: blob: https:;
+               style-src 'self' 'unsafe-inline' https:;
+               font-src 'self' data: https:;
+               frame-src 'self' https:;">
+
+
+<!-- ============================================================
+     RASTREAMENTO DE CONVERSÃO — GOOGLE ADS
+     
      ID: AW-18391595876
-═══════════════════════════════════════════════════════════════ -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18391595876"></script>
+============================================================ -->
+
+<script async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18391595876">
+</script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
   gtag('js', new Date());
+
   gtag('config', 'AW-18391595876');
 </script>
 
-<!-- Snippet de evento de conversão — "Contato" (clique no WhatsApp)
-     Conta a conversão IMEDIATAMENTE no clique, sem esperar callback
-     do gtag e sem depender do WhatsApp realmente abrir. -->
+
+<!-- ============================================================
+     CONVERSÃO — CONTATO / WHATSAPP
+============================================================ -->
+
 <script>
   function gtag_report_conversion(url) {
+
     gtag('event', 'conversion', {
-        'send_to': 'AW-18391595876/S2ULCJmpoeIcEOT25cFE',
-        'value': 1.0,
-        'currency': 'BRL'
+      'send_to': 'AW-18391595876/S2ULCJmpoeIcEOT25cFE',
+      'value': 1.0,
+      'currency': 'BRL'
     });
+
     return true;
   }
 </script>
 
-<!-- Meta Pixel (Facebook/Instagram Ads) - troque SEU_PIXEL_ID -->
+
+<!-- ============================================================
+     META PIXEL — FACEBOOK / INSTAGRAM ADS
+     Deixado desativado até inserir o Pixel ID.
+============================================================ -->
+
 <!--
 <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  !function(f,b,e,v,n,t,s){
+
+    if(f.fbq)return;
+
+    n=f.fbq=function(){
+      n.callMethod ?
+      n.callMethod.apply(n,arguments) :
+      n.queue.push(arguments)
+    };
+
+    if(!f._fbq)f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+
+  }(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+  );
+
   fbq('init', 'SEU_PIXEL_ID');
   fbq('track', 'PageView');
 </script>
 -->
 
-<!-- Logo dinâmica: será substituída pelo JS após carregar config.json -->
-<link rel="icon" type="image/png" sizes="192x192" id="favicon-link" href="https://a.imagem.app/GeYjYX.png">
-<link rel="apple-touch-icon" id="apple-touch-icon-link" href="https://a.imagem.app/GeYjYX.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-manda essa parte ompleta atualizada
+<!-- ============================================================
+     LOGO / FAVICON
+============================================================ -->
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  id="favicon-link"
+  href="https://a.imagem.app/GeYjYX.png">
+
+<link
+  rel="apple-touch-icon"
+  id="apple-touch-icon-link"
+  href="https://a.imagem.app/GeYjYX.png">
+
+
+<!-- ============================================================
+     GOOGLE FONTS
+============================================================ -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+      
 <style>
 /* ── TOKENS ───────────────────────────────────────────────────── */
 :root{
