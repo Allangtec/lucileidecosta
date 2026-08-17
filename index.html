@@ -18,6 +18,15 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+
+<!-- ═══════════════════════════════════════════════════════════════
+     POLÍTICA DE SEGURANÇA DE CONTEÚDO (CSP)
+     Necessária no GitHub Pages (hospedagem estática, sem headers
+     HTTP customizáveis) para liberar os domínios do Google
+     (Tag Manager / Ads / Analytics) e o WhatsApp. Sem isto, o
+     navegador bloqueia gtag/gtm e a conversão do clique no
+     WhatsApp não é registrada no Google Ads.
+═══════════════════════════════════════════════════════════════ -->
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval'
@@ -44,6 +53,7 @@
   font-src 'self' https://fonts.gstatic.com data:;
   frame-src https://bid.g.doubleclick.net;
 ">
+
 <!-- ═══════════════════════════════════════════════════════════════
      RASTREAMENTO DE CONVERSÃO (Google Ads) — ATIVO
      ID: AW-18391595876
