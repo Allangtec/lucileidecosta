@@ -31,21 +31,17 @@
   gtag('config', 'AW-18391595876');
 </script>
 
-<!-- Snippet de evento de conversão — "Contato" (clique no WhatsApp) -->
+<!-- Snippet de evento de conversão — "Contato" (clique no WhatsApp)
+     Conta a conversão IMEDIATAMENTE no clique, sem esperar callback
+     do gtag e sem depender do WhatsApp realmente abrir. -->
 <script>
   function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
     gtag('event', 'conversion', {
         'send_to': 'AW-18391595876/S2ULCJmpoeIcEOT25cFE',
         'value': 1.0,
-        'currency': 'BRL',
-        'event_callback': callback
+        'currency': 'BRL'
     });
-    return false;
+    return true;
   }
 </script>
 
@@ -551,11 +547,18 @@ let DATA = DEFAULT_DATA;
 /* ── TRACKING DE CONVERSÃO ────────────────────────────────────────
    Dispara automaticamente para o Google Ads/Analytics (gtag) e para
    o Meta Pixel (fbq) se estiverem instalados no <head>. Não faz nada
-   e não gera erro se eles ainda não tiverem sido configurados. ── */
+   e não gera erro se eles ainda não tiverem sido configurados.
+   IMPORTANTE: conta a conversão assim que o botão é CLICADO —
+   não depende de o WhatsApp realmente abrir. ── */
 function trackConversion(label) {
   try {
     if (typeof gtag === "function") {
       gtag("event", "generate_lead", { event_category: "whatsapp", event_label: label });
+      gtag("event", "conversion", {
+        send_to: "AW-18391595876/S2ULCJmpoeIcEOT25cFE",
+        value: 1.0,
+        currency: "BRL"
+      });
     }
     if (typeof fbq === "function") {
       fbq("track", "Lead", { content_name: label });
@@ -777,10 +780,8 @@ function render() {
     el.href = WHATSAPP_URL;
     if (!el.dataset.trackBound) {
       el.dataset.trackBound = "1";
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
+      el.addEventListener("click", () => {
         trackConversion("whatsapp_padrao");
-        gtag_report_conversion(el.href);
       });
     }
   });
@@ -788,10 +789,8 @@ function render() {
     el.href = OFERTA_WHATSAPP_URL;
     if (!el.dataset.trackBound) {
       el.dataset.trackBound = "1";
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
+      el.addEventListener("click", () => {
         trackConversion("whatsapp_oferta_valor_social");
-        gtag_report_conversion(el.href);
       });
     }
   });
