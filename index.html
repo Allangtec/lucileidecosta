@@ -20,10 +20,13 @@
 <meta http-equiv="Expires" content="0" />
 <meta http-equiv="Content-Security-Policy"
       content="default-src 'self' https: data: blob:;
-               script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net;
-               script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net;
-               connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net;
-               img-src 'self' data: https:;">
+               script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+               script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+               connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+               img-src 'self' data: blob: https: https://www.google.com https://www.google.com.br;
+               frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://www.google.com;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+               font-src 'self' data: https://fonts.gstatic.com;">
 <!-- ═══════════════════════════════════════════════════════════════
      RASTREAMENTO DE CONVERSÃO (Google Ads) — ATIVO
      ID: AW-18391595876
