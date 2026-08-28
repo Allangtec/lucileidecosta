@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -818,6 +817,55 @@ function render() {
     }
     ldScript.textContent = JSON.stringify(ld);
   } catch (e) { console.warn("Não foi possível gerar dados estruturados.", e); }
+
+  // SCHEMA.ORG EXTRA — WebSite + FAQPage + Breadcrumb
+  // (ajuda o Google a exibir sitelinks e a sanfona de perguntas)
+  try {
+    const siteUrl = window.location.origin + "/";
+
+    const faqSchema = {
+      "@type": "FAQPage",
+      "mainEntity": d.faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a.replace(/<[^>]*>/g, "")
+        }
+      }))
+    };
+
+    const websiteSchema = {
+      "@type": "WebSite",
+      "name": d.marca.nomeExibicao,
+      "url": siteUrl,
+      "publisher": { "@type": "Psychologist", "name": d.marca.nomeCompleto }
+    };
+
+    const breadcrumbSchema = {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": siteUrl },
+        { "@type": "ListItem", "position": 2, "name": "Sobre", "item": siteUrl + "#sobre" },
+        { "@type": "ListItem", "position": 3, "name": "Áreas de atuação", "item": siteUrl + "#ajuda" },
+        { "@type": "ListItem", "position": 4, "name": "Como funciona", "item": siteUrl + "#como-funciona" },
+        { "@type": "ListItem", "position": 5, "name": "Espaço presencial", "item": siteUrl + "#espaco" },
+        { "@type": "ListItem", "position": 6, "name": "Perguntas frequentes", "item": siteUrl + "#faq" }
+      ]
+    };
+
+    let ldExtra = document.getElementById("ld-json-extra");
+    if (!ldExtra) {
+      ldExtra = document.createElement("script");
+      ldExtra.type = "application/ld+json";
+      ldExtra.id = "ld-json-extra";
+      document.head.appendChild(ldExtra);
+    }
+    ldExtra.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [faqSchema, websiteSchema, breadcrumbSchema]
+    });
+  } catch (e) { console.warn("Não foi possível gerar o schema extra.", e); }
 
   // Logo dinâmica (favicon + apple-touch-icon)
   const faviconEl = document.getElementById("favicon-link");
